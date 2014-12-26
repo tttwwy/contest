@@ -1,9 +1,7 @@
 # coding=utf-8
 # created by WangZhe on 2014/12/23
-from contest.main import spark
-import os
-os.environ.setdefault("CONTEST_SETTINGS_MODULE", "settings")
 
+from contest.main import spark
 class Work(spark.SparkModel):
     def get_score(self, uid_label_predict):
         pass

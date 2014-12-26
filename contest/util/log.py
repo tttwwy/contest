@@ -2,7 +2,8 @@
 # created by WangZhe on 2014/11/2
 import time
 import sys
-from contest.util.conf import setting
+from contest.util.conf import *
+
 import logging
 
 from timeit import timeit as timeit
@@ -43,7 +44,10 @@ def train_log(str):
     with open(log_file,'a') as f:
         f.write("{0}\n".format(str))
 # logging = None
-logging = set_log(setting.log_path)
+try:
+    logging = set_log(setting.log_path)
+except Exception:
+    pass
 #     logging.basicConfig(level=mylog.DEBUG,
 #                     format=' %(asctime)s %(filename)s line:%(lineno)d %(funcName)s :%(message)s',
 #                     datefmt='%Y-%m-%d %H:%M:%S',

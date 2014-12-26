@@ -5,23 +5,38 @@ import time
 import os
 import collections
 from contest.util.log import *
-from contest.util.conf import setting
+from contest.util.conf import *
 import cPickle
+import collections
 
 class BaseModel():
     def __init__(self):
         self.model_args = {}
         print setting.label_file_path
-        self.read_label(setting.label_file_path)
+        if setting.default_label:
+            default_label = setting.default_label
+        else:
+            default_label = '0'
+        self.init_labels(setting.label_file_path,default_label)
+        self.default_label = default_label
+        self.map = {}
+
+
+    def init_labels(self,file_name,default_label='0'):
+        # def default():
+        #     return '0'
+        # self.labels = collections.defaultdict(default)
+        self.labels = self.read_labels(file_name)
 
     @run_time
-    def read_label(self,file_name):
-        self.labels = {}
+    def read_labels(self,file_name):
+        labels = {}
         for line in open(file_name,'r'):
             line_list = line.strip().split("\t")
             uid = line_list[0]
             key,value = line_list[1].split(":")
-            self.labels[key] = value
+            labels[key] = value
+            return labels
 
 
     @run_time
@@ -41,10 +56,10 @@ class BaseModel():
         with open(model_file_name + ".index", "r") as f:
             self.map = cPickle.load(f)
 
-
+    @run_time
     def train_fdata(self, fdata, model, **kwargs):
-        train_data = self.transform_fdata(fdata, model.train_type)
-        model.train(train_data=train_data, **kwargs)
+        train_data = self.transform_fdata(fdata, model.train_data_type)
+        model.train_fdata(fdata=train_data, **kwargs)
         self.model = model
 
     @run_time
@@ -56,17 +71,25 @@ class BaseModel():
     def evaluate_fdata(self, fdata, **kwargs):
         uid_label_predict = self.predict_fdata(fdata)
         result = self.handle_predict_result(uid_label_predict, **kwargs)
-        return self.score(result)
+        return self.get_score(result)
 
 
     def handle_predict_result(self, uid_label_predict, **kwargs):
         result = sorted(uid_label_predict, lambda x, y: cmp(x[2], y[2]), reverse=True)
         result_scale = kwargs['result_scale']
-        result_num = result_scale * len(result)
-        return result[:result_num]
+        result_num = int(result_scale * len(result))
+        new_result = []
+        for index,(uid,label,predict) in enumerate(result):
+            predict = '1' if index < result_num else '0'
+            new_result.append((uid,label,predict))
+        #
+        # print result[:100]
+        # print result[-100:]
+        return new_result
 
     @run_time
     def get_score(self, uid_label_predict):
+        # print uid_label_predict
         A = 0
         B = 0
         C = 0

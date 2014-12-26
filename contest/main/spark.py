@@ -38,7 +38,10 @@ class SparkModel(base.BaseModel):
 
     @run_time
     def data_to_fdata(self,data):
-        labels_broadcast = SparkModel.sc.broadcast(self.labels)
+        lables = self.labels
+        default_lable = self.default_label
+        print lables
+        labels_broadcast = SparkModel.sc.broadcast((lables,default_lable))
 
         def handle(x):
             line = x.split("\t")
@@ -46,7 +49,8 @@ class SparkModel(base.BaseModel):
 
         def handle2(x):
             uid,values = x
-            label = labels_broadcast.value.get(uid,'0')
+            labels,default_label = labels_broadcast.value
+            label = labels.get(uid,default_label)
             value_map = {}
             for item in values:
                 key,value = item.split(":")
@@ -139,7 +143,7 @@ class SparkModel(base.BaseModel):
 
         sparse_data = fdata.map(map)
         if not is_reduce:
-            return sparse_data.collect()
+            return sparse_data
 
         logging.info("reduce start")
         uid_list = []
@@ -150,7 +154,6 @@ class SparkModel(base.BaseModel):
             y_list.append(y)
             x_list.append(x)
 
-        logging.info(x_list[1:10])
         logging.info("reduce end")
 
         x_matrix = vstack(x_list)
@@ -159,6 +162,7 @@ class SparkModel(base.BaseModel):
 
         return uid_matrix, y_matrix, x_matrix
 
+    @run_time
     def transform_fdata(self,fdata,type,is_reduce=True):
         if type == 'sklearn':
             return self.sklearn(fdata,is_reduce)
@@ -168,8 +172,8 @@ class SparkModel(base.BaseModel):
     @run_time
     def predict_fdata(self,fdata):
         model = self.model
-        data = self.transform_fdata(fdata,model.type,False)
-        uid_label_predict = fdata.map(lambda p:(p[0],p[1],model.predict_value(p[2])))
+        data = self.transform_fdata(fdata,model.train_data_type,False)
+        uid_label_predict = data.map(lambda p:(p[0],p[1],model.predict_value(p[2]))).collect()
         return uid_label_predict
 
 

@@ -1,17 +1,20 @@
 # coding=utf-8
 # created by WangZhe on 2014/12/23
-import os
-os.environ.setdefault("CONTEST_SETTINGS_MODULE", "setting")
+
 from contest.main import spark
 
-print os.environ['CONTEST_SETTINGS_MODULE']
 
 class Work(spark.SparkModel):
-    def get_score(self, uid_label_predict):
-        pass
+    def __init__(self):
+        spark.SparkModel.__init__(self)
 
-    def save_submit_file(self,predicts,save_file_name):
-        pass
+    def read_labels(self,file_name):
+        labels = {}
+        for line in open(file_name,'r'):
+            uid = line.strip()
+            labels[uid] = '1'
+        return labels
+
 
 
 
