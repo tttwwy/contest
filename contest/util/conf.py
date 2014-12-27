@@ -10,7 +10,7 @@ def init():
     return setting
 
 try:
-    setting = importlib.import_module('setting')
+    setting = init()
 except Exception:
     pass
 

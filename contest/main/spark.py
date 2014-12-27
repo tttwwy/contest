@@ -8,6 +8,8 @@ from contest.util.log import *
 import cPickle
 from scipy.sparse import lil_matrix,vstack
 import numpy
+from pyspark.mllib.regression import LabeledPoint
+from pyspark.mllib.linalg import SparseVector
 
 class SparkModel(base.BaseModel):
 
@@ -125,8 +127,35 @@ class SparkModel(base.BaseModel):
             new_max_data = max_data.sample(False,scale,seed)
             return min_data + new_max_data
 
+    def mllib(self,fdata,is_train=True):
+        map = self.get_fdata_map(fdata)
+        broadcast_map = self.get_sc().broadcast(map)
+        broadcast_size = self.get_sc().broadcast(len(map))
+        def train_data(line):
+            uid,label,values = line
+            new_values = {}
+            for key,value in values.iteritems():
+                if key in broadcast_map.value:
+                    new_values[broadcast_map.value[key]] = value
+            return LabeledPoint(label,SparseVector(broadcast_size.value,new_values))
 
-    def sklearn(self, fdata,is_reduce=True):
+        def test_data(line):
+            uid,label,values = line
+            new_values = {}
+            for key,value in values.iteritems():
+                if key in broadcast_map.value:
+                    new_values[broadcast_map.value[key]] = value
+            return (uid,label,SparseVector(broadcast_size.value,new_values))
+
+        if is_train:
+            data = fdata.map(train_data)
+        else:
+            data = fdata.map(test_data)
+        return data
+
+
+
+    def sklearn(self, fdata,is_train=True):
         map = self.get_fdata_map(fdata)
 
         broadcast_map = self.get_sc().broadcast(map)
@@ -142,7 +171,7 @@ class SparkModel(base.BaseModel):
             return (uid, y, x)
 
         sparse_data = fdata.map(map)
-        if not is_reduce:
+        if not is_train:
             return sparse_data
 
         logging.info("reduce start")
@@ -163,9 +192,11 @@ class SparkModel(base.BaseModel):
         return uid_matrix, y_matrix, x_matrix
 
     @run_time
-    def transform_fdata(self,fdata,type,is_reduce=True):
+    def transform_fdata(self,fdata,type,is_train=True):
         if type == 'sklearn':
-            return self.sklearn(fdata,is_reduce)
+            return self.sklearn(fdata,is_train)
+        elif type == 'mllib':
+            return self.mllib(fdata,is_train=is_train)
 
 
 
