@@ -44,12 +44,13 @@ class Hive(Base):
                 yield line_list
 
 class MySql(Base):
-    def __init__(self,ip='127.0.0.1',user='root',passw='root',database=''):
+    def __init__(self,ip='127.0.0.1',user='root',passw='root',database='',work_dir=''):
         self.ip = ip
         self.user = user
         self.passw = passw
         self.database = database
         self.set_database(database)
+        self.work_dir = work_dir
 
 
     @run_time
@@ -63,7 +64,8 @@ class MySql(Base):
         data = self.cursor.fetchall()
 
 if __name__ == "__main__":
-    pass
+    feature = MySql()
+    feature.work_dir = 'asdf'
 
 
 

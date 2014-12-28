@@ -63,14 +63,16 @@ class SparkModel(base.BaseModel):
         fdata = result.map(handle2)
         return fdata
 
-    def divide_data(self,data,scale):
-        seed = random.randint(0,10000)
-        data = data.map(lambda x:(x[0],x))
-        rdd1 = data.sample(False,scale,seed)
-        rdd2 = data.subtractByKey(rdd1)
-        rdd1 = rdd1.map(lambda x:x[1])
-        rdd2 = rdd2.map(lambda x:x[1])
-        return rdd1,rdd2
+    def divide_data(self,data,scale_list):
+        if isinstance(scale_list,float):
+            scale_list = [scale_list,1-scale_list]
+        # seed = random.randint(0,10000)
+        # data = data.map(lambda x:(x[0],x))
+        # rdd1 = data.sample(False,scale,seed)
+        # rdd2 = data.subtractByKey(rdd1)
+        # rdd1 = rdd1.map(lambda x:x[1])
+        # rdd2 = rdd2.map(lambda x:x[1])
+        return data.randomSplit(scale_list)
 
     def file_to_data(self,file_name):
         data = SparkModel.sc.textFile(file_name)
@@ -154,8 +156,44 @@ class SparkModel(base.BaseModel):
         return data
 
 
+    def sklearn_dense(self, fdata, is_train=True):
+        map = self.get_fdata_map(fdata)
 
-    def sklearn(self, fdata,is_train=True):
+        broadcast_map = self.get_sc().broadcast(map)
+        broadcast_size = self.get_sc().broadcast(len(map))
+
+        def map(line):
+            uid, y, values = line
+            x = lil_matrix((1, broadcast_size.value), dtype=float)
+            for key, value in values.iteritems():
+                if key in broadcast_map.value:
+                    x[0, broadcast_map.value[key]] = value
+            x = x.tocsr()
+            return (uid, y, x)
+
+        sparse_data = fdata.map(map)
+        if not is_train:
+            return sparse_data
+
+        logging.info("reduce start")
+        uid_list = []
+        y_list = []
+        x_list = []
+        for uid, y, x in sparse_data.collect():
+            uid_list.append(uid)
+            y_list.append(y)
+            x_list.append(x)
+
+        logging.info("reduce end")
+
+        x_matrix = vstack(x_list)
+        uid_matrix = numpy.array(uid_list)
+        y_matrix = numpy.array(y_list)
+
+        return uid_matrix, y_matrix, x_matrix
+
+
+    def sklearn_sparse(self, fdata,is_train=True):
         map = self.get_fdata_map(fdata)
 
         broadcast_map = self.get_sc().broadcast(map)
@@ -194,7 +232,7 @@ class SparkModel(base.BaseModel):
     @run_time
     def transform_fdata(self,fdata,type,is_train=True):
         if type == 'sklearn':
-            return self.sklearn(fdata,is_train)
+            return self.sklearn_sparse(fdata,is_train)
         elif type == 'mllib':
             return self.mllib(fdata,is_train=is_train)
 

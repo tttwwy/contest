@@ -3,7 +3,7 @@
 from scipy.sparse import lil_matrix,vstack
 from sklearn import linear_model
 from pyspark.mllib.classification import LogisticRegressionWithLBFGS
-
+from pyspark.mllib.tree import RandomForest
 
 class LR():
     def __init__(self):

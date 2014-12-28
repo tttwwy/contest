@@ -8,6 +8,7 @@ from contest.util.conf import *
 from src.manage import Work
 # from contest.model.sklearn.LogisticRegression import LR as SklearnLR
 from contest.model.mllib.LogisticRegression import LR
+from contest.model.sklearn.RandomForestClassifier import RF
 
 if __name__ == "__main__":
     work = Work()
@@ -19,7 +20,8 @@ if __name__ == "__main__":
         # ftrain_data = ftrain_data.sample(False,0.01,3)
         ftest_data = work.features_to_fdata("ccf/data/validation/", *feature_list)
 
-        model = LR()
+        LR = LR()
+        RF = RF()
         # work.train_fdata(fdata=ftrain_data,
         #                  model=model,
         #                   C=0.2, intercept_scaling=1,
@@ -28,14 +30,30 @@ if __name__ == "__main__":
         #                   penalty='l1',
         #                   tol=0.1)
 
+        # work.train_fdata(fdata=ftrain_data,
+        #                  model=model,
+        #                  iterations=1000009,
+        #                  regParam=0.0001,
+        #                  regType="l1",
+        #                  intercept=False,
+        #                  corrections=10,
+        #                  tolerance=0.001)
         work.train_fdata(fdata=ftrain_data,
-                         model=model,
-                         iterations=100,
-                         regParam=0.01,
-                         regType="l1",
-                         intercept=False,
-                         corrections=10,
-                         tolerance=1e-4)
+                         model=RF,
+                         n_estimators=10,
+                         criterion='gini',
+                         max_depth=None,
+                         min_samples_split=2,
+                         min_samples_leaf=1,
+                         max_features='auto',
+                         max_leaf_nodes=None,
+                         bootstrap=True,
+                         oob_score=False,
+                         n_jobs=12,
+                         random_state=None,
+                         verbose=0,
+                         min_density=None,
+                         compute_importances=None)
 
 
         for result_scale in [0, 0.0005, 0.0006, 0.006, 0.007, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01]:

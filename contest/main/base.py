@@ -78,12 +78,13 @@ class BaseModel():
         result = sorted(uid_label_predict, lambda x, y: cmp(x[2], y[2]), reverse=True)
         result_scale = kwargs['result_scale']
         result_num = int(result_scale * len(result))
+        print result[:100]
         new_result = []
         for index,(uid,label,predict) in enumerate(result):
             predict = '1' if index < result_num else '0'
             new_result.append((uid,label,predict))
         #
-        # print result[:100]
+        #
         # print result[-100:]
         return new_result
 
