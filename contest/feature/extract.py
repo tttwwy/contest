@@ -62,10 +62,11 @@ class MySql(Base):
     def read_sql(self,sql):
         self.cursor.execute(sql)
         data = self.cursor.fetchall()
+        return data
 
 if __name__ == "__main__":
     feature = MySql()
-    feature.work_dir = 'asdf'
+
 
 
 
