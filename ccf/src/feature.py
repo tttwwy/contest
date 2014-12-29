@@ -2,6 +2,9 @@
 # created by WangZhe on 2014/12/28
 from contest.feature.extract import *
 class Feature(MySql):
+    def __init__(self,**kwargs):
+        MySql.__init__(self,**kwargs)
+
     def extract(self,feature_name,sql):
         with open(os.path.join(self.work_dir, feature_name + ".txt"), 'w') as f:
             for line in self.read_sql(sql):
@@ -18,4 +21,11 @@ class Feature(MySql):
 
 
 if __name__ == "__main__":
-    pass
+    feature = Feature(ip='172.16.46.6',
+                      user='contest',
+                      passw='contest',
+                      database='recsys',
+                      work_dir='/home/wangzhe/8/contest/recsys/data/feature')
+    feature.extract('u00','')
+
+
