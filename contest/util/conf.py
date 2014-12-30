@@ -2,17 +2,28 @@
 # created by WangZhe on 2014/12/23
 import importlib
 import os
+import sys
 
-def init():
-    ENVIRONMENT_VARIABLE = 'CONTEST_SETTINGS_MODULE'
-    setting_name = os.environ[ENVIRONMENT_VARIABLE]
-    setting = importlib.import_module(setting_name)
+def set_config_path(path=''):
+    ENVIRONMENT_VARIABLE = 'RECSYS_SETTINGS_MODULE'
+    if not path:
+        setting_path = os.path.splitext(os.environ[ENVIRONMENT_VARIABLE])[0]
+    else:
+        setting_path = os.path.splitext(path)[0]
+
+    print 'd',setting_path
+    dirname = os.path.dirname(setting_path)
+    basename = os.path.basename(setting_path)
+    print dirname
+    print basename
+    if not basename:
+        basename = 'setting'
+    sys.path.append(dirname)
+    setting = importlib.import_module(basename)
     return setting
 
-try:
-    setting = init()
-except Exception:
-    pass
+setting = set_config_path()
+
 
 
 

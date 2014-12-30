@@ -10,19 +10,33 @@ class Base():
     def read_sql(self,sql):
         pass
 
+    # @run_time
+    # def extract(self,feature_name,sql):
+    #     results = collections.defaultdict(list)
+    #     for line in self.read_sql(sql):
+    #         uid = line[0]
+    #         key = feature_name + line[1] if len(line) == 3 else ''
+    #         value = line[-1]
+    #         results[uid].append((key,value))
+    #
+    #     with open(os.path.join(self.work_dir, feature_name + ".txt"), 'w') as f:
+    #         for uid,key_value in results.iteritems():
+    #             result_list = ["{0}:{1}".format(key,value) for key,value in key_value]
+    #             f.write("{0}\t{1}\n".format(uid,"\t".join(result_list)))
+
     @run_time
     def extract(self,feature_name,sql):
-        results = collections.defaultdict(list)
-        for line in self.read_sql(sql):
-            uid = line[0]
-            key = feature_name + line[1] if len(line) == 3 else ''
-            value = line[-1]
-            results[uid].append((key,value))
-
         with open(os.path.join(self.work_dir, feature_name + ".txt"), 'w') as f:
-            for uid,key_value in results.iteritems():
-                result_list = ["{0}:{1}".format(key,value) for key,value in key_value]
-                f.write("{0}\t{1}\n".format(uid,"\t".join(result_list)))
+            for line in self.read_sql(sql):
+                if feature_name[:2] == 'si':
+                    key1 = line[0]
+                    key2 = line[1]
+                    value = line[2]
+                    f.write("{0}_{1}\t{2}:{3}\n".format(key1,key2,feature_name,value))
+                else:
+                    key = line[0]
+                    value = line[1]
+                    f.write("{0}\t{1}:{2}\n".format(key,feature_name,value))
 
 class Hive(Base):
     def __init__(self,hive_path,work_dir='',database=''):

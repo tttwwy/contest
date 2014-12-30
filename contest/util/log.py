@@ -2,7 +2,7 @@
 # created by WangZhe on 2014/11/2
 import time
 import sys
-from contest.util.conf import *
+from contest.util import conf
 
 import logging
 
@@ -40,12 +40,12 @@ def set_log(log_path):
     return gLogger
 
 def train_log(str):
-    log_file = setting.train_log_path
+    log_file = conf.setting.train_log_path
     with open(log_file,'a') as f:
         f.write("{0}\n".format(str))
 # logging = None
 try:
-    logging = set_log(setting.log_path)
+    logging = set_log(conf.setting.log_path)
 except Exception:
     pass
 #     logging.basicConfig(level=mylog.DEBUG,

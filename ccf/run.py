@@ -2,9 +2,11 @@
 # created by WangZhe on 2014/12/25
 import os
 import sys
-os.environ.setdefault("CONTEST_SETTINGS_MODULE", "src.setting")
+import contest.util.conf
 
-from contest.util.conf import *
+conf.set_config_path('/home/wangzhe/8/contest/ccf/src/setting.py')
+from contest.util.log import *
+logging.info('dddf')
 from src.manage import Work
 # from contest.model.sklearn.LogisticRegression import LR as SklearnLR
 from contest.model.mllib.LogisticRegression import LR
