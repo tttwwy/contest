@@ -1,6 +1,7 @@
 # coding=utf-8
 # created by WangZhe on 2014/12/28
 from contest.feature.extract import *
+
 class Feature(MySql):
     def __init__(self,**kwargs):
         MySql.__init__(self,**kwargs)

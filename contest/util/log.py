@@ -43,7 +43,8 @@ def train_log(str):
     log_file = conf.setting.train_log_path
     with open(log_file,'a') as f:
         f.write("{0}\n".format(str))
-# logging = None
+logging = None
+print 'ddddd'
 try:
     logging = set_log(conf.setting.log_path)
 except Exception:

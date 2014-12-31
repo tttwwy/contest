@@ -4,7 +4,8 @@ __author__ = 'WangZhe'
 import base
 import os
 import random
-from contest.util.log import *
+from contest.util.log import logging,train_log,run_time
+
 import cPickle
 from scipy.sparse import lil_matrix,vstack
 import numpy

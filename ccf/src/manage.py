@@ -1,9 +1,5 @@
 # coding=utf-8
 # created by WangZhe on 2014/12/23
-import sys
-import setting
-from contest.util import conf
-conf.setting = setting
 
 from contest.main import spark
 

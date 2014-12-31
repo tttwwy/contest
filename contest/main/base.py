@@ -4,8 +4,10 @@
 import time
 import os
 import collections
-from contest.util.log import *
-from contest.util.conf import *
+
+
+from contest.util.log import logging,train_log,run_time
+from contest.util.conf import setting
 import cPickle
 import collections
 

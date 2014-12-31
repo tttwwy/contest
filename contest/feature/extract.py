@@ -3,8 +3,7 @@
 
 import os
 import collections
-from contest.util.log import *
-
+from contest.util.log import logging,train_log,run_time
 
 class Base():
     def read_sql(self,sql):
