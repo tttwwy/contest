@@ -8,22 +8,21 @@ from sklearn import linear_model
 class LR():
     def __init__(self):
         self.train_data_type = 'sklearn'
-        self.train_args = {}
+        self.model_name = 'LR'
 
-    def train_fdata(self,fdata,**kwargs):
-        uid, y, x = fdata
+    def train(self,data,**kwargs):
+        uid, y, x = data
         model = linear_model.LogisticRegression(**kwargs)
         model.fit(x, y)
         self.model = model
-        self.train_args.update(kwargs)
 
-    def predict_value(self,fdata):
+    def predict_value(self,data):
         # uid, y, x = fdata
-        prob = self.model.predict_proba(fdata)[0][1]
+        prob = self.model.predict_proba(data)[0][1]
         return prob
 
-    def predict_values(self,fdata):
-        uid,y,x = fdata
+    def predict_values(self,data):
+        uid,y,x = data
         probs = self.model.predict_proba(x)
         return probs[:][1]
 

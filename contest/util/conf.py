@@ -11,11 +11,8 @@ def set_config_path(path=''):
     else:
         setting_path = os.path.splitext(path)[0]
 
-    print 'd',setting_path
     dirname = os.path.dirname(setting_path)
     basename = os.path.basename(setting_path)
-    print dirname
-    print basename
     if not basename:
         basename = 'setting'
     sys.path.append(dirname)
@@ -23,9 +20,6 @@ def set_config_path(path=''):
     return setting
 
 setting = set_config_path()
-
-
-
 
 
 

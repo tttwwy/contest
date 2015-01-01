@@ -9,20 +9,23 @@ from contest.util.log import logging,train_log,run_time
 import cPickle
 from scipy.sparse import lil_matrix,vstack
 import numpy
-from pyspark.mllib.regression import LabeledPoint
-from pyspark.mllib.linalg import SparseVector
+
 
 class SparkModel(base.BaseModel):
 
     def __init__(self):
         base.BaseModel.__init__(self)
-        try:
-            from pyspark import SparkContext
-            SparkModel.sc = SparkContext(appName="contest")
-        except:
-            pass
 
+    @run_time
+    def features_to_fdata(self,work_dir,*args):
+        new_data = self.file_to_data(os.path.join(work_dir,args[0] + ".txt"))
+        for feature_name in args[1:]:
+            file_name = os.path.join(work_dir,feature_name + ".txt")
+            data = self.file_to_data(file_name)
+            new_data = new_data + data
 
+        fdata = self.data_to_fdata(new_data)
+        return fdata
 
     def get_sc(self):
         return SparkModel.sc
@@ -32,6 +35,7 @@ class SparkModel(base.BaseModel):
     def data_to_fdata(self,data):
         lables = self.labels
         default_lable = self.default_label
+        print lables
         labels_broadcast = SparkModel.sc.broadcast((lables,default_lable))
 
         def handle(x):
@@ -52,7 +56,6 @@ class SparkModel(base.BaseModel):
         fdata = result.map(handle2)
         return fdata
 
-    @run_time
     def divide_data(self,data,scale_list):
         if isinstance(scale_list,float):
             scale_list = [scale_list,1-scale_list]
@@ -87,7 +90,6 @@ class SparkModel(base.BaseModel):
         self.map = new_map
         return new_map
 
-    @run_time
     def map_fdata(self,fdata):
         map = self.get_fdata_map(fdata)
         broadcast_map = SparkModel.sc.broadcast(map)
@@ -120,7 +122,6 @@ class SparkModel(base.BaseModel):
             new_max_data = max_data.sample(False,scale,seed)
             return min_data + new_max_data
 
-    @run_time
     def mllib(self,fdata,is_train=True):
         map = self.get_fdata_map(fdata)
         broadcast_map = self.get_sc().broadcast(map)
@@ -147,7 +148,7 @@ class SparkModel(base.BaseModel):
             data = fdata.map(test_data)
         return data
 
-    @run_time
+
     def sklearn_dense(self, fdata, is_train=True):
         map = self.get_fdata_map(fdata)
 
@@ -184,7 +185,7 @@ class SparkModel(base.BaseModel):
 
         return uid_matrix, y_matrix, x_matrix
 
-    @run_time
+
     def sklearn_sparse(self, fdata,is_train=True):
         map = self.get_fdata_map(fdata)
 
@@ -228,18 +229,14 @@ class SparkModel(base.BaseModel):
         elif type == 'mllib':
             return self.mllib(fdata,is_train=is_train)
 
-    @run_time
-    def predict_mdata(self,mdata):
-        model = self.model
-        uid_label_predict = mdata.map(lambda p:(p[0],p[1],model.predict_value(p[2]))).collect()
-        return uid_label_predict
 
 
     @run_time
     def predict_fdata(self,fdata):
-        data = self.transform_fdata(fdata,self.model.train_data_type,False)
-        return self.predict_mdata(data)
-
+        model = self.model
+        data = self.transform_fdata(fdata,model.train_data_type,False)
+        uid_label_predict = data.map(lambda p:(p[0],p[1],model.predict_value(p[2]))).collect()
+        return uid_label_predict
 
 
 

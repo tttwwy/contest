@@ -8,24 +8,20 @@ from pyspark.mllib.tree import RandomForest
 class LR():
     def __init__(self):
         self.train_data_type = 'mllib'
-        self.train_args = {}
+        self.model_name = 'LR'
 
-    def train_fdata(self,fdata,**kwargs):
-
-        model = LogisticRegressionWithLBFGS.train(data=fdata,**kwargs)
+    def train(self,data,**kwargs):
+        model = LogisticRegressionWithLBFGS.train(data=data,**kwargs)
         model.clearThreshold()
-        # model = linear_model.LogisticRegression(**kwargs)
-        # model.fit(x, y)
         self.model = model
-        self.train_args.update(kwargs)
 
-    def predict_value(self,fdata):
+    def predict_value(self,data):
         # uid, y, x = fdata
-        prob = self.model.predict(fdata)
+        prob = self.model.predict(data)
         return prob
 
-    def predict_values(self,fdata):        
-        probs = self.model.predict(fdata)
+    def predict_values(self,data):
+        probs = self.model.predict(data)
         return probs
 
 

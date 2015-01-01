@@ -43,12 +43,14 @@ def train_log(str):
     log_file = conf.setting.train_log_path
     with open(log_file,'a') as f:
         f.write("{0}\n".format(str))
+    print str
 logging = None
-print 'ddddd'
 try:
     logging = set_log(conf.setting.log_path)
 except Exception:
     pass
+
+
 #     logging.basicConfig(level=mylog.DEBUG,
 #                     format=' %(asctime)s %(filename)s line:%(lineno)d %(funcName)s :%(message)s',
 #                     datefmt='%Y-%m-%d %H:%M:%S',
