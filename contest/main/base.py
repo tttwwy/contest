@@ -19,8 +19,8 @@ class BaseModel():
         else:
             default_label = '0'
 
-        self.model_args = {}
-        self.model_args['feature_names'] = set()
+        self.model_params = {}
+        self.model_params['feature_names'] = set()
         self.init_labels(setting.label_file_path,default_label)
         self.default_label = default_label
         self.map = {}
@@ -72,7 +72,7 @@ class BaseModel():
         self.feature_names = args
 
         fdata = self.data_to_fdata(new_data)
-        self.model_args['feature_names'].update(args)
+        self.model_params['feature_names'].update(args)
         return fdata
 
     @run_time
@@ -94,13 +94,13 @@ class BaseModel():
     def evaluate_mdata(self, mdata, **kwargs):
         uid_label_predict = self.predict_mdata(mdata)
         result = self.handle_predict_result(uid_label_predict, **kwargs)
-        self.model_args['score'] = {}
-        self.model_args['score'].update(kwargs)
+        self.model_params['score'] = {}
+        self.model_params['score'].update(kwargs)
 
         P,R,F = self.get_score(result)
-        self.model_args['score']['P'] = P
-        self.model_args['score']['R'] = R
-        self.model_args['score']['F'] = F
+        self.model_params['score']['P'] = P
+        self.model_params['score']['R'] = R
+        self.model_params['score']['F'] = F
 
         self.log_args_value()
         return P,R,F
@@ -112,7 +112,14 @@ class BaseModel():
         mdata = self.transform_fdata(fdata,self.model.train_data_type,is_train=False)
         return self.evaluate_mdata(mdata,**kwargs)
 
+    def submit_fdata(self,fdata,**kwargs):
+        mdata = self.transform_fdata(fdata,self.model.train_data_type,is_train=False)
+        return self.submit_mdata(mdata,**kwargs)
 
+    def submit_mdata(self,mdata,**kwargs):
+        uid_label_predict = self.predict_mdata(mdata)
+        result = self.handle_predict_result(uid_label_predict, **kwargs)
+        self.save_submit_file(result,save_file_name=kwargs['file_name'])
 
     def handle_predict_result(self, uid_label_predict, **kwargs):
         result = sorted(uid_label_predict, lambda x, y: cmp(x[2], y[2]), reverse=True)
@@ -130,8 +137,8 @@ class BaseModel():
 
     @run_time
     def log_args_value(self):
-        score_list = list(self.model_args['score'].values())
-        feature_list = self.model_args['feature_names']
+        score_list = list(self.model_params['score'].values())
+        feature_list = self.model_params['feature_names']
         train_args_list = self.model.train_args.values()
         result_list = score_list + (",".join(feature_list)) + train_args_list
         result_str = "\t".join([str(x) for x in result_list])
@@ -139,7 +146,7 @@ class BaseModel():
 
     @run_time
     def log_args_name(self):
-        score_list = list(self.model_args['score'].keys())
+        score_list = list(self.model_params['score'].keys())
         feature_list = ['feature_names']
         train_args_list = self.model.train_args.keys()
         result_list = score_list + feature_list + train_args_list
