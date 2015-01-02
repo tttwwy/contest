@@ -26,11 +26,9 @@ class BaseModel():
         self.map = {}
 
 
+    # 读取label，方便为训练数据和测试集打标签
     @run_time
     def init_labels(self,file_name,default_label='0'):
-        # def default():
-        #     return '0'
-        # self.labels = collections.defaultdict(default)
         self.labels = self.read_labels(file_name)
 
     @run_time
@@ -62,6 +60,7 @@ class BaseModel():
             self.map = cPickle.load(f)
 
 
+    # 读取特征文件，转化成框架的标准特征文件fdata
     @run_time
     def features_to_fdata(self, work_dir, *args):
         new_data = self.file_to_data(os.path.join(work_dir, args[0] + ".txt"))
@@ -75,26 +74,27 @@ class BaseModel():
         self.model_params['feature_names'].update(args)
         return fdata
 
+    # 模型训练
+    @run_time
+    def train_fdata(self, fdata, model, **kwargs):
+        train_data = self.transform_fdata(fdata, model.train_data_type)
+        self.train_mdata(train_data,model,**kwargs)
+
+    # 模型训练
     @run_time
     def train_mdata(self,mdata,model,**kwargs):
         model.train(data=mdata,**kwargs)
         self.model = model
         self.model.train_params = kwargs
 
-    @run_time
-    def train_fdata(self, fdata, model, **kwargs):
-        train_data = self.transform_fdata(fdata, model.train_data_type)
-        self.train_mdata(train_data,model,**kwargs)
 
-    @run_time
-    def save_submit_file(self,predicts,save_file_name):
-        pass
-
+    # 对fdata格式的验证集评分
     @run_time
     def evaluate_fdata(self, fdata, **kwargs):
         mdata = self.transform_fdata(fdata,self.model.train_data_type,is_train=False)
         return self.evaluate_mdata(mdata,**kwargs)
 
+    # 对mdata格式的验证集评分
     @run_time
     def evaluate_mdata(self, mdata, **kwargs):
         uid_label_predict = self.predict_mdata(mdata)
@@ -109,50 +109,59 @@ class BaseModel():
         self.log_params_value()
         return P, R, F
 
+    #  对fdata格式的测试数据，产生提交文件
     def submit_fdata(self,fdata,**kwargs):
         mdata = self.transform_fdata(fdata,self.model.train_data_type,is_train=False)
         return self.submit_mdata(mdata,**kwargs)
 
+    # 对mdata格式的测试数据，产生提交文件
     def submit_mdata(self,mdata,**kwargs):
         uid_label_predict = self.predict_mdata(mdata)
         result = self.handle_predict_result(uid_label_predict, **kwargs)
         self.save_submit_file(result,save_file_name=kwargs['file_name'])
 
+    # 输入key，label,predict_label,产生提交文件
+    @run_time
+    def save_submit_file(self,predicts,save_file_name):
+        pass
+
+    # 处理得到预测结果（概率）的数据，以方便下一步评分
     def handle_predict_result(self, uid_label_predict, **kwargs):
         result = sorted(uid_label_predict, lambda x, y: cmp(x[2], y[2]), reverse=True)
-        result_scale = kwargs['result_scale']
+        result_scale = kwargs['scale']
         result_num = int(result_scale * len(result))
 
         new_result = []
         for index,(uid,label,predict) in enumerate(result):
             predict = '1' if index < result_num else '0'
             new_result.append((uid,label,predict))
-        #
-        #
-        # print result[-100:]
+
         return new_result
 
 
+    # 显示训练参数和评分的表头名称
     @run_time
     def log_params_name(self):
         scores = self.model_params['score'].keys()
         predict_params = self.model_params['predict_params'].keys()
-        feature_names = ['feature_names']
+        feature_names = ['features']
         train_params = self.model.train_params.keys()
         result_list = scores + predict_params + feature_names + train_params
         result_str = "\t".join(result_list)
         train_log(result_str)
 
+    # 显示训练参数和评分的值 
     @run_time
     def log_params_value(self):
         scores = self.model_params['score'].values()
         predict_params = self.model_params['predict_params'].values()
-        feature_names = self.model_params['feature_names']
+        feature_names = self.model_params['features']
         train_params = self.model.train_params.values()
         result_list = scores + predict_params + [",".join(feature_names)] + train_params
         result_str = "\t".join([str(x) for x in result_list])
         train_log(result_str)
 
+    # 对数据进行评分
     @run_time
     def get_score(self, uid_label_predict):
         A = 0
