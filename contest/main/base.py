@@ -91,26 +91,23 @@ class BaseModel():
         pass
 
     @run_time
+    def evaluate_fdata(self, fdata, **kwargs):
+        mdata = self.transform_fdata(fdata,self.model.train_data_type,is_train=False)
+        return self.evaluate_mdata(mdata,**kwargs)
+
+    @run_time
     def evaluate_mdata(self, mdata, **kwargs):
         uid_label_predict = self.predict_mdata(mdata)
         result = self.handle_predict_result(uid_label_predict, **kwargs)
         self.model_params['score'] = {}
-        self.model_params['score'].update(kwargs)
+        self.model_params['predict_params'].update(kwargs)
 
-        P,R,F = self.get_score(result)
+        P, R, F = self.get_score(result)
         self.model_params['score']['P'] = P
         self.model_params['score']['R'] = R
         self.model_params['score']['F'] = F
-
-        self.log_args_value()
-        return P,R,F
-
-
-
-    @run_time
-    def evaluate_fdata(self, fdata, **kwargs):
-        mdata = self.transform_fdata(fdata,self.model.train_data_type,is_train=False)
-        return self.evaluate_mdata(mdata,**kwargs)
+        self.log_params_value()
+        return P, R, F
 
     def submit_fdata(self,fdata,**kwargs):
         mdata = self.transform_fdata(fdata,self.model.train_data_type,is_train=False)
@@ -137,7 +134,7 @@ class BaseModel():
 
 
     @run_time
-    def log_args_name(self):
+    def log_params_name(self):
         scores = self.model_params['score'].keys()
         predict_params = self.model_params['predict_params'].keys()
         feature_names = ['feature_names']
@@ -147,7 +144,7 @@ class BaseModel():
         train_log(result_str)
 
     @run_time
-    def log_args_value(self):
+    def log_params_value(self):
         scores = self.model_params['score'].values()
         predict_params = self.model_params['predict_params'].values()
         feature_names = self.model_params['feature_names']

@@ -19,11 +19,12 @@ if __name__ == "__main__":
     for feature_list in feature_lists:
         ftrain_data = work.features_to_fdata("ccf/data/train/", *feature_list)
         ftrain_data = ftrain_data.sample(False, 0.01, 3)
+
         ftrain_data,ftest_data = work.divide_data(ftrain_data,[0.7,0.3])
 
 
         ftest_data = work.features_to_fdata("ccf/data/validation/", *feature_list)
-
+        ftest_data = ftest_data.sample(False, 0.01, 3)
         LR = LR()
         RF = RF()
         # work.train_fdata(fdata=ftrain_data,
@@ -60,7 +61,7 @@ if __name__ == "__main__":
         #                  min_density=None,
         #                  compute_importances=None)
 
-        work.log_args_name()
+        work.log_params_name()
         for result_scale in [0, 0.0005, 0.0006, 0.006, 0.007, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01]:
             print work.evaluate_fdata(fdata=ftest_data, result_scale=result_scale)
 
