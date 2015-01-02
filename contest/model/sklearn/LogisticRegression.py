@@ -7,7 +7,7 @@ from sklearn import linear_model
 
 class LR():
     def __init__(self):
-        self.train_data_type = 'sklearn'
+        self.train_data_type = 'sklearn_sparse'
         self.model_name = 'LR'
 
     def train(self,data,**kwargs):

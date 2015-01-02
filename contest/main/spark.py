@@ -222,11 +222,14 @@ class SparkModel(base.BaseModel):
         return uid_matrix, y_matrix, x_matrix
 
     @run_time
-    def transform_fdata(self,fdata,type,is_train=True):
-        if type == 'sklearn':
-            return self.sklearn_sparse(fdata,is_train)
-        elif type == 'mllib':
-            return self.mllib(fdata,is_train=is_train)
+    def transform_fdata(self,fdata,func_name,is_train=True):
+        func = None
+        exec 'func = self.{0}'.format(func_name)
+        return func(fdata,is_train)
+        # if func_name == 'sklearn':
+        #     return self.sklearn_sparse(fdata,is_train)
+        # elif func_name == 'mllib':
+        #     return self.mllib(fdata,is_train=is_train)
 
     @run_time
     def predict_mdata(self,mdata):
