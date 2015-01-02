@@ -79,7 +79,7 @@ class BaseModel():
     def train_mdata(self,mdata,model,**kwargs):
         model.train(data=mdata,**kwargs)
         self.model = model
-        self.model.train_args = kwargs
+        self.model.train_params = kwargs
 
     @run_time
     def train_fdata(self, fdata, model, **kwargs):
@@ -135,6 +135,17 @@ class BaseModel():
         # print result[-100:]
         return new_result
 
+
+    @run_time
+    def log_args_name(self):
+        scores = self.model_params['score'].keys()
+        predict_params = self.model_params['predict_params'].keys()
+        feature_names = ['feature_names']
+        train_params = self.model.train_params.keys()
+        result_list = scores + predict_params + feature_names + train_params
+        result_str = "\t".join(result_list)
+        train_log(result_str)
+
     @run_time
     def log_args_value(self):
         score_list = list(self.model_params['score'].values())
@@ -142,15 +153,6 @@ class BaseModel():
         train_args_list = self.model.train_args.values()
         result_list = score_list + [",".join(feature_list)] + train_args_list
         result_str = "\t".join([str(x) for x in result_list])
-        train_log(result_str)
-
-    @run_time
-    def log_args_name(self):
-        score_list = list(self.model_params['score'].keys())
-        feature_list = ['feature_names']
-        train_args_list = self.model.train_args.keys()
-        result_list = score_list + feature_list + train_args_list
-        result_str = "\t".join(result_list)
         train_log(result_str)
 
     @run_time
