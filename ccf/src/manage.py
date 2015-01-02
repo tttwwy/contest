@@ -11,7 +11,7 @@ class Work(spark.SparkModel):
         self.model_params['score']['P'] = 0
         self.model_params['score']['R'] = 0
         self.model_params['score']['F'] = 0
-        self.model_params['result_scale'] = 0
+        self.model_params['score']['result_scale'] = 0
 
     def read_labels(self,file_name):
         labels = {}

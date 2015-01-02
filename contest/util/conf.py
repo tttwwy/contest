@@ -15,7 +15,7 @@ def set_config_path(path=''):
     basename = os.path.basename(setting_path)
     if not basename:
         basename = 'setting'
-    sys.path.append(dirname)
+    sys.path.insert(0,dirname)
     setting = importlib.import_module(basename)
     return setting
 

@@ -3,5 +3,5 @@
 
 log_path = 'log'
 train_log_path = 'train_log'
-label_file_path = '/home/wangzhe/ccf/data/feature/transform.txt'
+label_file_path = '/home/wangzhe/contest/ccf/data/feature/transform.txt'
 default_label = '0'
