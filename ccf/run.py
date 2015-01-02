@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
         work.log_params_name()
         for result_scale in [0, 0.0005, 0.0006, 0.006, 0.007, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01]:
-            print work.evaluate_fdata(fdata=ftest_data, scale=result_scale)
+            print work.evaluate_fdata(fdata=ftest_data, result_scale=result_scale)
 
 
 
