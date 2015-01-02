@@ -140,7 +140,7 @@ class BaseModel():
         score_list = list(self.model_params['score'].values())
         feature_list = self.model_params['feature_names']
         train_args_list = self.model.train_args.values()
-        result_list = score_list + (",".join(feature_list)) + train_args_list
+        result_list = score_list + [",".join(feature_list)] + train_args_list
         result_str = "\t".join([str(x) for x in result_list])
         train_log(result_str)
 
