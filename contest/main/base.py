@@ -149,9 +149,10 @@ class BaseModel():
     @run_time
     def log_args_value(self):
         scores = self.model_params['score'].values()
-        fature_names = self.model_params['feature_names']
+        predict_params = self.model_params['predict_params'].values()
+        feature_names = self.model_params['feature_names']
         train_params = self.model.train_params.values()
-        result_list = scores + [",".join(fature_names)] + train_params
+        result_list = scores + predict_params + [",".join(feature_names)] + train_params
         result_str = "\t".join([str(x) for x in result_list])
         train_log(result_str)
 
