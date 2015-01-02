@@ -128,7 +128,7 @@ class BaseModel():
     # 处理得到预测结果（概率）的数据，以方便下一步评分
     def handle_predict_result(self, uid_label_predict, **kwargs):
         result = sorted(uid_label_predict, lambda x, y: cmp(x[2], y[2]), reverse=True)
-        result_scale = kwargs['result_scale']
+        result_scale = kwargs['scale']
         result_num = int(result_scale * len(result))
 
         new_result = []
