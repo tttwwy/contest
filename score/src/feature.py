@@ -22,15 +22,17 @@ class MyExtract(MySql):
             if len(line) != feature_size:
                 continue
 
+            line = [str(x) for x in line]
             uid,term = line[:2]
             other_key = line[2:-1]
             value = line[-1]
             terms[term][uid].append(("_".join(other_key),value))
 
         for term,items in terms.iteritems():
-            with open(os.path.join(self.work_dir, "uid_term{0}_{1}".format(term,"_".join(feature_list)) + ".txt"), 'w') as f:
-                for uid,value_list in items:
-                    f.write("{0}\t{1}".format(uid,"\t".join(["{0}:{1}".format(key,value) for key,value in value_list])))
+            with open(os.path.join(self.work_dir, "uid_term{0}_{1}".format(term,"_".join(feature_list[2:])) + ".txt"), 'w') as f:
+                # print items
+                for uid,value_list in items.iteritems():
+                    f.write("{0}\t{1}\n".format(uid,"\t".join(["{0}:{1}".format(key,value) for key,value in value_list])))
         logging.info("{0} end".format(feature_name))
 
 

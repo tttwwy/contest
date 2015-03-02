@@ -9,4 +9,5 @@ print conf.setting.log_path
 from src.feature import MyExtract
 #
 feature = MyExtract(work_dir = '',host='ssh.freeshell.ustc.edu.cn',user='root',passwd='root',port=48384,db='score_train')
+feature.extract('uid_term_month_1','SELECT uid,term,month(time),count(uid) FROM `book`group by uid,term,month(time)')
 
