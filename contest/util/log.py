@@ -3,8 +3,8 @@
 import time
 import sys
 from contest.util import conf
-
-import logging
+import logging as log
+import os
 
 from timeit import timeit as timeit
 
@@ -20,23 +20,22 @@ colors = {
 }
 
 
-
 def set_log(log_path):
     import logging.config
-    import os
-    gLogger = logging.getLogger()
+    gLogger = log.getLogger()
     # logdir = "/home/wangzhe/ccf/contest"
     # os.system("mkdir -p " + logdir)
     # log_file = "./%s/%s"%(logdir,logfile)
-    formatter = logging.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(funcName)s %(message)s','%Y-%m-%d %H:%M:%S')
-    handler = logging.StreamHandler(sys.stdout)
+
+    formatter = log.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(funcName)s %(message)s','%Y-%m-%d %H:%M:%S')
+    handler = log.StreamHandler(sys.stdout)
     handler.setFormatter(formatter)
     gLogger.addHandler(handler)
-    formatter = logging.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(funcName)s %(message)s','%Y-%m-%d %H:%M:%S')
-    handler = logging.handlers.RotatingFileHandler(log_path)
+    formatter = log.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(funcName)s %(message)s','%Y-%m-%d %H:%M:%S')
+    handler = log.handlers.RotatingFileHandler(log_path)
     handler.setFormatter(formatter)
     gLogger.addHandler(handler)
-    gLogger.setLevel(logging.INFO)
+    gLogger.setLevel(log.INFO)
     return gLogger
 
 def train_log(str):
@@ -44,11 +43,10 @@ def train_log(str):
     with open(log_file,'a') as f:
         f.write("{0}\n".format(str))
     print str
-logging = None
-try:
-    logging = set_log(conf.setting.log_path)
-except Exception:
-    pass
+
+logging = set_log(conf.setting.log_path)
+
+
 
 
 #     logging.basicConfig(level=mylog.DEBUG,

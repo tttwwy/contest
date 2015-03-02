@@ -1,0 +1,15 @@
+[2015-03-02 23:32:00][INFO] file:log.py line:72 func:new_func set_database:start
+[2015-03-02 23:33:33][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:35:29][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:39:02][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:40:12][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:40:48][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:42:23][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:57:29][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:57:45][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:58:09][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:59:07][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:59:21][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:59:34][INFO] file:log.py line:70 func:new_func set_database:start
+[2015-03-02 23:59:35][INFO] file:log.py line:73 func:new_func set_database:end
+[2015-03-02 23:59:35][INFO] file:log.py line:74 func:new_func set_database: 0.608000040054 s

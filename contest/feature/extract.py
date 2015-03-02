@@ -5,7 +5,7 @@ import os
 import collections
 from contest.util.log import logging,train_log,run_time
 
-class Base():
+class Base(object):
     def read_sql(self,sql):
         pass
 
@@ -57,19 +57,22 @@ class Hive(Base):
                 yield line_list
 
 class MySql(Base):
-    def __init__(self,ip='127.0.0.1',user='root',passw='root',database='',work_dir=''):
-        self.ip = ip
-        self.user = user
-        self.passw = passw
-        self.database = database
-        self.set_database(database)
+    def __init__(self,work_dir='',**kwargs):
+
         self.work_dir = work_dir
+        self.kwargs = kwargs
+
+        self.set_database()
+
 
 
     @run_time
-    def set_database(self,database):
-            import MySQLdb
-            self.cursor  = MySQLdb.connect(self.ip,self.user,self.passw,database).cursor()
+    def set_database(self,db=''):
+        import MySQLdb
+        if db:
+            self.kwargs['db'] = db
+        print self.kwargs
+        self.cursor  = MySQLdb.connect(**self.kwargs).cursor()
 
     @run_time
     def read_sql(self,sql):

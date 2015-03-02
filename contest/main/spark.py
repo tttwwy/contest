@@ -15,7 +15,8 @@ from pyspark.mllib.linalg import SparseVector
 class SparkModel(base.BaseModel):
 
     def __init__(self):
-        base.BaseModel.__init__(self)
+        # base.BaseModel.__init__(self)
+        super(SparkModel,self).__init__()
         try:
             from pyspark import SparkContext
             SparkModel.sc = SparkContext(appName="contest")
@@ -224,8 +225,9 @@ class SparkModel(base.BaseModel):
     @run_time
     def transform_fdata(self,fdata,func_name,is_train=True):
         func = None
-        exec 'func = self.{0}'.format(func_name)
-        return func(fdata,is_train)
+        # exec 'func = self.{0}'.format(func_name)
+        transform_func = getattr(self,func_name)
+        return transform_func(fdata,is_train)
         # if func_name == 'sklearn':
         #     return self.sklearn_sparse(fdata,is_train)
         # elif func_name == 'mllib':
