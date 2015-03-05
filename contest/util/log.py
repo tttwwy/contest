@@ -27,11 +27,11 @@ def set_log(log_path):
     # os.system("mkdir -p " + logdir)
     # log_file = "./%s/%s"%(logdir,logfile)
 
-    formatter = log.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(funcName)s %(message)s','%Y-%m-%d %H:%M:%S')
+    formatter = log.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(message)s','%Y-%m-%d %H:%M:%S')
     handler = log.StreamHandler(sys.stdout)
     handler.setFormatter(formatter)
     gLogger.addHandler(handler)
-    formatter = log.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(funcName)s %(message)s','%Y-%m-%d %H:%M:%S')
+    formatter = log.Formatter('[%(asctime)s][%(levelname)s] file:%(filename)s line:%(lineno)d func:%(message)s','%Y-%m-%d %H:%M:%S')
     handler = log.handlers.RotatingFileHandler(log_path)
     handler.setFormatter(formatter)
     gLogger.addHandler(handler)

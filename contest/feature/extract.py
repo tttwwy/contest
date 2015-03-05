@@ -61,8 +61,8 @@ class MySql(Base):
 
         self.work_dir = work_dir
         self.kwargs = kwargs
-
         self.set_database()
+        print self.work_dir
 
 
 
@@ -71,7 +71,6 @@ class MySql(Base):
         import MySQLdb
         if db:
             self.kwargs['db'] = db
-        print self.kwargs
         self.cursor  = MySQLdb.connect(**self.kwargs).cursor()
 
     @run_time

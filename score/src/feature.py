@@ -9,7 +9,7 @@ from contest.util.log import logging
 class MyExtract(MySql):
 
     def __init__(self,work_dir='',**kwargs):
-        super(MyExtract,self).__init__(work_dir='',**kwargs)
+        super(MyExtract,self).__init__(work_dir,**kwargs)
 
     def extract(self,feature_name,sql):
         logging.info("{0} start".format(feature_name))
@@ -29,7 +29,8 @@ class MyExtract(MySql):
             terms[term][uid].append(("_".join(other_key),value))
 
         for term,items in terms.iteritems():
-            with open(os.path.join(self.work_dir, "uid_term{0}_{1}".format(term,"_".join(feature_list[2:])) + ".txt"), 'w') as f:
+            file_name = "uid_term{0}_{1}".format(term,"_".join(feature_list[2:]))
+            with open(os.path.join(self.work_dir, file_name + ".txt"), 'w') as f:
                 # print items
                 for uid,value_list in items.iteritems():
                     f.write("{0}\t{1}\n".format(uid,"\t".join(["{0}:{1}".format(key,value) for key,value in value_list])))

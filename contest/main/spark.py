@@ -24,14 +24,41 @@ class SparkModel(base.BaseModel):
             pass
 
 
+        # 读取label，方便为训练数据和测试集打标签
+
+    @run_time
+    def read_labels(self, file_name):
+        labels = {}
+        for line in open(file_name, 'r'):
+            line_list = line.strip().split("\t")
+            uid = line_list[0]
+            key, value = line_list[1].split(":")
+            labels[key] = value
+            return labels
 
     def get_sc(self):
         return SparkModel.sc
 
 
+# 读取特征文件，转化成框架的标准特征文件fdata
+
+    @run_time
+    def features_to_fdata(self, work_dir, *args):
+        new_data = SparkModel.sc.textFile(os.path.join(work_dir, args[0] + ".txt"))
+        for feature_name in args[1:]:
+            file_name = os.path.join(work_dir, feature_name + ".txt")
+            data = SparkModel.sc.textFile(file_name)
+            new_data = new_data + data
+
+        self.feature_names = args
+
+        fdata = self.data_to_fdata(new_data)
+        self.model_params['feature_names'].update(args)
+        return fdata
+
     @run_time
     def data_to_fdata(self,data):
-        lables = self.labels
+        lables = self.read_labels(self.label_file_path)
         default_lable = self.default_label
         labels_broadcast = SparkModel.sc.broadcast((lables,default_lable))
 
@@ -64,10 +91,6 @@ class SparkModel(base.BaseModel):
         # rdd1 = rdd1.map(lambda x:x[1])
         # rdd2 = rdd2.map(lambda x:x[1])
         return data.randomSplit(scale_list)
-
-    def file_to_data(self,file_name):
-        data = SparkModel.sc.textFile(file_name)
-        return data
 
 
     @run_time

@@ -3,6 +3,7 @@
 
 
 from contest.feature.extract import Base,MySql
+from contest.main.general import GeneralModel
 import os
 from collections import defaultdict
 class MyExtract(MySql):
@@ -23,6 +24,14 @@ class MyExtract(MySql):
             with open(os.path.join(self.work_dir, "uid_term{0}_{1}".format(term,"_".join(feature_list)) + ".txt"), 'w') as f:
                 for uid,value_list in items:
                     f.write("{0}\t{1}".format(uid,"\t".join(["{0}:{1}".format(key,value) for key,value in value_list])))
+
+class MyContest(GeneralModel):
+    def __init__(self):
+        super(self,GeneralModel).__init__()
+
+    def handle_predict_result(self, uid_label_predict, **kwargs):
+        return uid_label_predict
+    # def get_score(self, uid_label_predict):
 
 #
 # class Work(spark.SparkModel):
