@@ -29,7 +29,7 @@ class GeneralModel(base.BaseModel):
                 data['uid'] = uid
                 for item in features:
                     feature_name, feature_value = item.split(":")
-                    data['label'] = feature_value
+                    data['label'] = float(feature_value)
                 datas.append(data)
 
         return pd.DataFrame(datas)
