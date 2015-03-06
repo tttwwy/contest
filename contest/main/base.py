@@ -143,7 +143,6 @@ class BaseModel(object):
     # 对数据进行评分
     @run_time
     def get_score(self, uid_label_predict):
-        print uid_label_predict
         A = 0
         B = 0
         C = 0

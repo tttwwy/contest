@@ -117,8 +117,6 @@ class GeneralModel(base.BaseModel):
         model = self.model
         uid_matrix, y_matrix, x_matrix = mdata
         predict_matrix = model.predict_values(x_matrix)
-        print x_matrix.shape,y_matrix.shape,uid_matrix.shape
-        print predict_matrix.shape
         return zip(uid_matrix,y_matrix,predict_matrix)
 
 

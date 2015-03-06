@@ -13,13 +13,9 @@ class MyContest(GeneralModel):
         predict_replace = {predict:index+1 for index,predict in enumerate(sorted([predict for uid,label,predict in uid_label_predict]))}
         new_result = [ (uid, label_replace[label] , predict_replace[predict]) for uid,label,predict in uid_label_predict ]
 
-        print label_replace
-        print predict_replace
-        print new_result
         return new_result
 
     def get_score(self, uid_label_predict):
-        print uid_label_predict
         n = len(uid_label_predict)
 
         score = 1 - 6.0 * sum([(label - predict)**2 for uid,label,predict in uid_label_predict])/(n*(n**2-1))
