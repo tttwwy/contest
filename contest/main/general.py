@@ -35,18 +35,19 @@ class GeneralModel(base.BaseModel):
         return pd.DataFrame(datas)
 
     @run_time
-    def features_to_fdata(self, work_dir, *args):
-        new_data = self.file_to_data(os.path.join(work_dir, args[0] + ".txt"), args[0]   )
-        for feature_name in args[1:]:
+    def features_to_fdata(self, work_dir, file_list):
+        file_list = self.feature_file_search(work_dir,file_list)
+        new_data = self.file_to_data(os.path.join(work_dir, file_list[0] + ".txt"), file_list[0]   )
+        for feature_name in file_list[1:]:
             file_name = os.path.join(work_dir, feature_name + ".txt")
             data = self.file_to_data(file_name,feature_name)
             new_data = pd.merge(new_data,data,how='outer',on='uid')
 
-        self.feature_names = args
+        self.feature_names = file_list
         label_data = self.read_labels(self.label_file_path)
         new_data = pd.merge(new_data, label_data, how='inner', on='uid')
         new_data = new_data.fillna(0.0)
-        self.model_params['feature_names'].update(args)
+        self.model_params['feature_names'].update(file_list)
         return new_data
 
     def file_to_data(self, file_name,feature_name):
@@ -92,8 +93,8 @@ class GeneralModel(base.BaseModel):
         uid_matrix = fdata['uid'].values
         y_matrix = fdata['label'].values
         x_matrix = fdata[fdata.columns.drop(['uid','label'])].values
-        from sklearn.preprocessing import StandardScaler
-        x_matrix = StandardScaler().fit_transform(x_matrix)
+        # from sklearn.preprocessing import StandardScaler
+        # x_matrix = StandardScaler().fit_transform(x_matrix)
 
         return uid_matrix, y_matrix, x_matrix
 
@@ -102,7 +103,7 @@ class GeneralModel(base.BaseModel):
         uid_matrix = fdata['uid'].values
         y_matrix = fdata['label'].values
         x_matrix = fdata[fdata.columns.drop(['uid','label'])].values
-        from sklearn.preprocessing import StandardScaler
+        # from sklearn.preprocessing import StandardScaler
         # x_matrix = StandardScaler().fit_transform(x_matrix)
         return uid_matrix, y_matrix, x_matrix
 

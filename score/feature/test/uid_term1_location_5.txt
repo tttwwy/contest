@@ -1,0 +1,65 @@
+54	bus:1.5000	classroom:5.9667	dininghall:7.3226	dormitory:9.1290	supermaket:2.0000
+42	bus:1.5000	classroom:1.6250	dininghall:3.4444	dormitory:2.9000	library:1.0000	supermaket:1.3750	??:1.0000
+60	bus:1.0000	dininghall:2.0769	dormitory:2.0714	library:1.0000	supermaket:1.0000
+61	bus:1.3333	classroom:1.4444	dininghall:3.6296	dormitory:2.8148	library:1.1429	supermaket:1.2000	??:1.0000
+62	bus:1.0000	classroom:1.0000	dininghall:7.0323	dormitory:5.1935	library:1.2500	supermaket:1.6190	??:1.0000
+63	bus:1.0000	dininghall:2.6000	dormitory:1.5000	library:1.0000	supermaket:1.1250
+64	bus:2.6667	classroom:2.8261	dininghall:8.8387	dormitory:2.7000	library:1.0000	supermaket:2.5000	??:1.0000
+49	dininghall:4.5000	dormitory:1.8182	library:1.0000	supermaket:1.0000
+67	bus:1.0000	classroom:1.0000	dininghall:9.3548	dormitory:10.0645	library:1.0000	supermaket:1.7391
+69	bus:1.3333	classroom:2.3793	dininghall:6.8889	dormitory:6.7742	library:1.5000	supermaket:1.7333
+80	bus:1.0000	dininghall:2.5000	dormitory:1.0000	supermaket:1.0000
+81	bus:1.2000	classroom:1.0000	dininghall:4.5806	dormitory:4.0667	supermaket:1.1429
+86	bus:1.3000	classroom:1.0000	dininghall:5.9032	dormitory:10.0000	library:1.1429	supermaket:2.1429	??:1.0000
+53	dininghall:2.1250	dormitory:1.1667	supermaket:1.0000
+84	bus:1.5714	dininghall:9.9677	dormitory:6.2581	library:1.3000	supermaket:1.4783
+25	classroom:1.0000	dininghall:2.0000	dormitory:1.3333	supermaket:1.2857
+26	bus:1.0000	dininghall:6.7097	dormitory:3.2258	supermaket:3.6000	??:1.0000
+27	classroom:2.3333	dininghall:3.0000	dormitory:4.1429
+20	bus:1.6667	classroom:1.6000	dininghall:16.6774	dormitory:1.7200	library:1.1053	supermaket:1.3333
+22	bus:1.0000	dininghall:2.5556	dormitory:1.2857	supermaket:1.0000
+23	bus:1.6000	classroom:3.4333	dininghall:13.0968	dormitory:15.1613	library:1.0000	supermaket:1.5455	??:1.0000
+47	dininghall:2.4000	dormitory:1.5000	library:1.0000	supermaket:1.5000
+45	bus:1.4000	classroom:1.4667	dininghall:8.0667	dormitory:4.7667	library:1.0000	supermaket:1.2857
+28	classroom:1.0000	dininghall:3.0000	dormitory:1.0000	supermaket:1.0000
+43	bus:1.5455	classroom:2.8667	dininghall:7.8710	dormitory:21.2258	library:1.0000	supermaket:1.6364
+41	bus:1.6364	classroom:3.5161	dininghall:12.0000	dormitory:6.2414	library:1.1429	supermaket:1.3810
+3	bus:1.0000	classroom:2.0000	dininghall:2.2857	dormitory:1.7500
+2	bus:1.5000	classroom:2.5385	dininghall:8.9032	dormitory:4.6207	supermaket:1.6316
+4	bus:2.0000	classroom:1.0000	dininghall:5.3214	dormitory:3.7000	library:1.0000	supermaket:1.3000
+7	bus:1.3333	classroom:1.0000	dininghall:3.0741	dormitory:6.1935	library:1.4000	supermaket:1.5909	??:1.0000
+6	bus:1.0000	classroom:1.0000	dininghall:2.8333	dormitory:1.6667	supermaket:2.0000
+9	bus:1.3000	classroom:1.3750	dininghall:6.6774	dormitory:6.7097	supermaket:2.2222
+8	bus:1.5000	classroom:1.5000	dininghall:4.3704	dormitory:4.3871	library:1.0000	supermaket:1.1250
+51	bus:1.0000	classroom:1.1429	dininghall:13.6452	dormitory:8.1935	library:1.0000	supermaket:2.5417
+87	bus:1.0000	classroom:1.0000	dininghall:2.0000	dormitory:1.3333	supermaket:1.0000
+83	bus:1.4167	dininghall:8.5806	dormitory:2.7742	supermaket:2.0000	??:1.5000
+39	bus:1.1000	classroom:1.5000	dininghall:12.5806	dormitory:12.5161	library:1.0000	supermaket:1.8235
+77	bus:1.4286	classroom:1.5263	dininghall:7.4194	dormitory:2.2308	library:1.0000	supermaket:3.1724
+76	bus:1.0000	classroom:1.3333	dininghall:2.7273	dormitory:3.1739	supermaket:1.1000	??:1.0000
+75	classroom:2.0000	dininghall:2.0000	dormitory:2.5000	supermaket:1.0000
+38	dininghall:2.0000	dormitory:1.0000	supermaket:1.0000
+71	bus:1.1667	dininghall:5.8966	dormitory:6.7667	library:1.5000	supermaket:1.5238
+70	classroom:2.0000	dininghall:2.5000	dormitory:4.2000
+59	dininghall:1.3333	dormitory:1.0000
+78	dininghall:1.2500	dormitory:2.1667	supermaket:2.5000
+11	dininghall:3.7097	dormitory:2.6667	supermaket:1.2941	??:1.0000
+10	bus:2.0000	dininghall:20.3871	dormitory:3.2333	library:2.3889	supermaket:1.7407	??:1.5000
+13	bus:1.4000	classroom:2.0000	dininghall:12.6774	dormitory:5.4194	library:1.6667	supermaket:2.3600	??:1.0000
+12	bus:2.0000	dininghall:2.1667	dormitory:4.2000	supermaket:1.0000
+15	bus:2.0000	classroom:1.0000	dininghall:8.0000	dormitory:5.4516	library:1.2000	supermaket:1.9500
+14	bus:1.0000	dininghall:2.0000	dormitory:1.0000	supermaket:1.0000
+16	bus:1.0000	classroom:1.2000	dininghall:5.9032	dormitory:5.6774	supermaket:1.7826
+19	dininghall:4.0690	dormitory:1.2500	library:1.0000	supermaket:1.1667	??:1.0000
+32	bus:2.0000	classroom:1.1250	dininghall:6.1935	dormitory:2.7333	library:1.0000	supermaket:3.5806
+31	bus:1.0000	classroom:4.0000	dininghall:2.0000	dormitory:1.0000	supermaket:1.0000
+30	bus:2.0000	classroom:2.6667	dininghall:1.0000	dormitory:1.3750	supermaket:1.0000
+37	dininghall:2.0000	dormitory:2.5000	supermaket:1.0000
+36	bus:1.3889	classroom:1.1250	dininghall:4.3448	dormitory:3.9032	supermaket:1.7500
+35	bus:1.0000	classroom:1.3333	dininghall:1.1429	dormitory:1.5000	supermaket:1.0000
+34	bus:1.0000	classroom:1.0000	dininghall:4.5000	dormitory:4.1429	library:2.0000	supermaket:1.3333
+33	bus:2.0000	dininghall:4.5161	dormitory:2.3333	library:1.0000	supermaket:1.4667
+55	bus:2.0000	classroom:1.0000	dininghall:8.8387	dormitory:2.3704	library:1.2000	supermaket:1.5000
+48	bus:1.7500	classroom:1.8333	dininghall:3.5200	dormitory:5.5484	supermaket:1.4118
+57	classroom:1.0000	dininghall:3.1667	dormitory:3.0000	supermaket:2.0000
+90	bus:1.5909	classroom:1.8095	dininghall:6.8387	dormitory:3.9032	library:1.0000	supermaket:1.5833

@@ -9,9 +9,13 @@ class MyContest(GeneralModel):
         super(GeneralModel,self).__init__()
 
     def handle_predict_result(self, uid_label_predict, **kwargs):
-        label_replace = {label:index+1 for index,label in enumerate(sorted([int(label) for uid,label,predict in uid_label_predict]))}
-        predict_replace = {predict:index+1 for index,predict in enumerate(sorted([int(predict) for uid,label,predict in uid_label_predict]))}
-        new_result = [ (uid, label_replace[int(label)] , predict_replace[int(predict)]) for uid,label,predict in uid_label_predict ]
+        label_replace = {label:index+1 for index,label in enumerate(sorted([label for uid,label,predict in uid_label_predict]))}
+        predict_replace = {predict:index+1 for index,predict in enumerate(sorted([predict for uid,label,predict in uid_label_predict]))}
+        new_result = [ (uid, label_replace[label] , predict_replace[predict]) for uid,label,predict in uid_label_predict ]
+
+        print label_replace
+        print predict_replace
+        print new_result
         return new_result
 
     def get_score(self, uid_label_predict):

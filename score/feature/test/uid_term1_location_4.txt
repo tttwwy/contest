@@ -1,0 +1,65 @@
+54	bus:5.25	classroom:0.072333	dininghall:30.654839	dormitory:4.396774	supermaket:36.180952
+42	bus:4.5	classroom:0.01625	dininghall:13.78037	dormitory:2.334667	library:4.5	supermaket:10.8375	??:0.15
+60	bus:2.5	dininghall:12.169231	dormitory:2.649286	library:22.9	supermaket:10.25
+61	bus:5.0	classroom:0.016667	dininghall:14.705556	dormitory:1.90037	library:6.771429	supermaket:5.64	??:6.95
+62	bus:2.5	classroom:0.01	dininghall:23.12871	dormitory:1.198065	library:4.35	supermaket:12.77619	??:0.45
+63	bus:4.0	dininghall:11.3492	dormitory:0.533889	library:3.9	supermaket:7.4375
+64	bus:6.666667	classroom:0.035217	dininghall:50.745161	dormitory:2.2955	library:5.6	supermaket:26.396667	??:8.55
+49	dininghall:19.69125	dormitory:0.621818	library:2.7	supermaket:15.55
+67	bus:1.0	classroom:0.01	dininghall:36.150645	dormitory:7.504516	library:7.4	supermaket:24.382609
+69	bus:3.333333	classroom:0.027241	dininghall:25.832222	dormitory:2.111935	library:8.15	supermaket:15.593333
+80	bus:1.0	dininghall:12.48	dormitory:0.065	supermaket:10.2
+81	bus:3.0	classroom:0.01	dininghall:19.270323	dormitory:1.394667	supermaket:5.164286
+86	bus:3.4	classroom:0.01	dininghall:27.27	dormitory:6.095161	library:4.571429	supermaket:10.803571	??:6.25
+53	dininghall:14.9875	dormitory:2.183333	supermaket:11.1
+84	bus:6.285714	dininghall:38.362581	dormitory:1.715806	library:5.77	supermaket:23.391304
+25	classroom:0.01	dininghall:10.785714	dormitory:1.2	supermaket:20.871429
+26	bus:4.0	dininghall:47.410968	dormitory:1.98	supermaket:39.786667	??:1.725
+27	classroom:0.026667	dininghall:10.49	dormitory:0.588571
+20	bus:6.666667	classroom:0.0164	dininghall:36.207419	dormitory:1.3636	library:10.350526	supermaket:10.038889
+22	bus:1.0	dininghall:15.088889	dormitory:0.48	supermaket:2.0
+23	bus:3.34	classroom:0.037333	dininghall:34.420323	dormitory:6.223548	library:5.5	supermaket:18.081818	??:1.2
+47	dininghall:10.258	dormitory:1.0075	library:9.3	supermaket:13.175
+45	bus:2.6	classroom:0.016667	dininghall:29.332333	dormitory:2.872333	library:10.0	supermaket:15.664286
+28	classroom:0.01	dininghall:7.13	dormitory:0.145	supermaket:6.5
+43	bus:5.227273	classroom:0.030333	dininghall:29.159677	dormitory:3.715484	library:2.35	supermaket:18.354545
+41	bus:4.090909	classroom:0.042258	dininghall:26.128387	dormitory:1.753793	library:3.0	supermaket:5.766667
+3	bus:4.0	classroom:0.02	dininghall:7.085714	dormitory:0.4675
+2	bus:6.0	classroom:0.026538	dininghall:37.502903	dormitory:3.521724	supermaket:35.268421
+4	bus:8.0	classroom:0.01	dininghall:18.629286	dormitory:1.023333	library:10.0	supermaket:18.08
+7	bus:3.0	classroom:0.0175	dininghall:16.555556	dormitory:3.107097	library:6.7	supermaket:8.622727	??:0.3
+6	bus:1.0	classroom:0.01	dininghall:11.336667	dormitory:0.503333	supermaket:13.3
+9	bus:2.5	classroom:0.01875	dininghall:31.471935	dormitory:2.792258	supermaket:24.733333
+8	bus:4.5	classroom:0.015	dininghall:13.31	dormitory:0.844839	library:6.75	supermaket:14.0
+51	bus:1.0	classroom:0.011429	dininghall:45.772903	dormitory:2.798387	library:10.0	supermaket:30.254167
+87	bus:4.0	classroom:0.01	dininghall:6.11	dormitory:0.423333	supermaket:1.5
+83	bus:4.666667	dininghall:35.837742	dormitory:1.570968	supermaket:20.673913	??:26.775
+39	bus:3.8	classroom:0.015	dininghall:53.976129	dormitory:2.909677	library:3.0	supermaket:64.423529
+77	bus:5.714286	classroom:0.015263	dininghall:38.997097	dormitory:1.422692	library:3.566667	supermaket:24.713793
+76	bus:1.0	classroom:0.013333	dininghall:16.048182	dormitory:2.365652	supermaket:10.105	??:0.75
+75	classroom:0.02	dininghall:5.05	dormitory:1.86	supermaket:22.0
+38	dininghall:11.05	dormitory:0.4	supermaket:17.1
+71	bus:3.666667	dininghall:17.02069	dormitory:2.445	library:8.7	supermaket:10.642857
+70	classroom:0.02	dininghall:8.7025	dormitory:0.728
+59	dininghall:3.466667	dormitory:1.85
+78	dininghall:7.65	dormitory:1.533333	supermaket:14.65
+11	dininghall:11.360645	dormitory:2.613333	supermaket:14.758824	??:1.3
+10	bus:8.0	dininghall:39.604194	dormitory:1.725	library:12.394444	supermaket:9.937037	??:1.925
+13	bus:4.4	classroom:0.0225	dininghall:46.149032	dormitory:1.961613	library:7.45	supermaket:20.1	??:1.2
+12	bus:8.0	dininghall:7.283333	dormitory:0.114	supermaket:6.0
+15	bus:8.0	classroom:0.01	dininghall:27.172581	dormitory:1.271935	library:4.88	supermaket:17.715
+14	bus:4.0	dininghall:7.55	dormitory:1.0	supermaket:5.3
+16	bus:0.95	classroom:0.014	dininghall:25.114194	dormitory:2.299032	supermaket:20.56087
+19	dininghall:16.139655	dormitory:0.236667	library:10.0	supermaket:9.866667	??:4.8
+32	bus:6.5	classroom:0.01125	dininghall:43.486129	dormitory:2.282333	library:6.3	supermaket:45.196774
+31	bus:4.0	classroom:0.04	dininghall:9.566667	dormitory:0.95	supermaket:13.4
+30	bus:8.0	classroom:0.04	dininghall:3.8	dormitory:1.17125	supermaket:21.0
+37	dininghall:4.85	dormitory:1.025	supermaket:22.1
+36	bus:4.711111	classroom:0.01375	dininghall:21.41	dormitory:2.046129	supermaket:30.76875
+35	bus:4.0	classroom:0.013333	dininghall:4.828571	dormitory:0.8075	supermaket:4.5
+34	bus:4.0	classroom:0.01	dininghall:13.893333	dormitory:1.04	library:6.1	supermaket:13.166667
+33	bus:5.0	dininghall:22.683871	dormitory:2.122667	library:3.35	supermaket:14.593333
+55	bus:8.0	classroom:0.01	dininghall:37.822903	dormitory:0.232222	library:7.948	supermaket:23.9375
+48	bus:3.25	classroom:0.019167	dininghall:14.812	dormitory:2.834194	supermaket:12.188235
+57	classroom:0.01	dininghall:15.33	dormitory:0.712	supermaket:34.9
+90	bus:5.390909	classroom:0.019524	dininghall:29.674839	dormitory:1.963548	library:4.28	supermaket:23.658333

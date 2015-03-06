@@ -1,0 +1,350 @@
+346	bus:12	classroom:68	dininghall:222	dormitory:134	library:8	supermaket:52
+341	classroom:9	dininghall:13	dormitory:2	supermaket:1
+342	bus:3	classroom:2	dininghall:5	dormitory:5	library:1
+343	dininghall:354	dormitory:73	library:3	print:1	supermaket:52
+349	classroom:16	dininghall:24	dormitory:11
+298	bus:15	dininghall:222	dormitory:24	print:1	supermaket:42
+299	bus:1	dininghall:309	dormitory:101	library:4	print:1	supermaket:50
+292	classroom:1	dininghall:20	dormitory:9	supermaket:2
+293	dininghall:17	dormitory:6	supermaket:2
+195	classroom:1	dormitory:10	supermaket:4
+194	dininghall:273	dormitory:89	library:4	supermaket:41
+197	classroom:6	dininghall:360	dormitory:193	library:2	supermaket:76
+196	bus:1	classroom:3	dininghall:46	dormitory:31	library:13	supermaket:3
+190	dininghall:15	dormitory:5	supermaket:2
+270	classroom:1	dininghall:25	dormitory:3	library:4	supermaket:5
+272	bus:3	dininghall:119	dormitory:31	library:66	supermaket:6
+273	bus:2	dininghall:11	dormitory:12	library:2	supermaket:1
+274	classroom:7	dininghall:8	dormitory:1
+276	bus:5	classroom:2	dininghall:214	dormitory:140	library:3	supermaket:127
+277	classroom:3	dininghall:21	dormitory:12	library:1	supermaket:9
+278	dininghall:19	dormitory:21	library:1	supermaket:5
+279	classroom:2	dininghall:18	dormitory:3
+525	dininghall:14	dormitory:3	supermaket:2
+526	bus:1	classroom:7	dininghall:288	dormitory:62	library:2	print:1	supermaket:65
+520	classroom:55	dininghall:283	dormitory:116	library:8	supermaket:35
+521	bus:7	classroom:5	dininghall:308	dormitory:142	library:6	print:2	supermaket:56
+523	bus:3	classroom:2	dininghall:92	dormitory:66	library:1	print:1	supermaket:75
+443	bus:3	dininghall:20	dormitory:12	supermaket:8
+441	dininghall:356	dormitory:159	library:1	supermaket:18
+440	bus:1	dininghall:7	dormitory:1
+447	classroom:4	dininghall:239	dormitory:162	print:3	supermaket:112
+446	classroom:85	dininghall:329	dormitory:107	library:3	print:2	supermaket:47
+445	bus:10	dininghall:176	dormitory:174	library:2	supermaket:57
+108	bus:3	classroom:1	dininghall:21	dormitory:32	library:8	supermaket:3
+109	bus:1	classroom:1	dininghall:280	dormitory:186	library:3	supermaket:79
+102	dininghall:14	dormitory:4	supermaket:1
+103	bus:28	classroom:12	dininghall:261	dormitory:116	library:9	print:1	supermaket:39
+106	bus:4	classroom:25	dininghall:356	dormitory:103	library:13	supermaket:17
+107	dininghall:14	dormitory:3	supermaket:2
+104	dininghall:10	supermaket:1
+105	classroom:2	dininghall:191	dormitory:52	library:16	print:1	supermaket:22
+38	dininghall:42	dormitory:56	supermaket:13
+32	bus:10	classroom:16	dininghall:436	dormitory:98	library:3	supermaket:35
+31	bus:2	dininghall:221	dormitory:180	library:96	supermaket:18
+30	bus:6	classroom:2	dininghall:397	dormitory:83	library:3	print:2	supermaket:50
+37	bus:4	classroom:1	dininghall:398	dormitory:189	library:1	print:1	supermaket:41
+35	dininghall:17	dormitory:8	supermaket:2
+34	dininghall:338	dormitory:128	print:2	supermaket:57
+438	classroom:31	dininghall:184	dormitory:194	library:1	supermaket:61
+439	dininghall:12	dormitory:4	supermaket:2
+436	classroom:2	dininghall:9	dormitory:3
+435	bus:2	dininghall:149	dormitory:52	library:2	supermaket:6
+432	classroom:8	dininghall:21	dormitory:12
+433	bus:6	classroom:6	dininghall:415	dormitory:81	library:2	print:2	supermaket:45
+339	classroom:71	dininghall:326	dormitory:127	library:14	print:2	supermaket:70
+338	dininghall:250	dormitory:59	supermaket:51
+335	dininghall:12	supermaket:1
+334	bus:1	dininghall:8	dormitory:9	supermaket:2
+331	classroom:2	dininghall:32	dormitory:26	library:7	supermaket:5
+333	dininghall:19	dormitory:5	supermaket:8
+332	bus:6	classroom:7	dininghall:285	dormitory:61	library:4	supermaket:31
+91	dininghall:19	dormitory:2	supermaket:3
+90	dininghall:217	dormitory:110	library:3	supermaket:18
+93	bus:5	classroom:1	dininghall:230	dormitory:124	library:5	supermaket:80
+97	bus:2	classroom:34	dininghall:277	dormitory:142	library:8	print:1	supermaket:71
+96	dininghall:13	dormitory:1	supermaket:5
+238	classroom:2	dininghall:101	dormitory:18	library:1	supermaket:10
+234	classroom:1	dininghall:19	dormitory:6
+235	bus:8	classroom:2	dininghall:251	dormitory:163	library:6	supermaket:33
+236	bus:10	dininghall:197	dormitory:28	library:3	supermaket:23
+230	bus:7	classroom:72	dininghall:276	dormitory:280	library:19	print:1	supermaket:80
+232	classroom:7	dininghall:339	dormitory:326	library:11	supermaket:61
+233	dininghall:145	dormitory:101	library:1	supermaket:6
+1	classroom:7	dininghall:126	dormitory:114	library:5	supermaket:28
+146	bus:7	classroom:3	dininghall:354	dormitory:192	library:13	print:1	supermaket:27
+147	classroom:7	dininghall:16	dormitory:11	supermaket:3
+145	dininghall:9	dormitory:3
+142	classroom:15	dininghall:18	dormitory:21	library:2	supermaket:7
+140	bus:3	classroom:2	dininghall:370	dormitory:182	library:2	print:1	supermaket:70
+148	bus:1	classroom:1	dininghall:93	dormitory:52	library:1	print:3	supermaket:21
+149	classroom:2	dininghall:14	dormitory:5	print:1	supermaket:1
+133	classroom:3	dininghall:12	dormitory:14	supermaket:7
+132	bus:7	classroom:150	dininghall:450	dormitory:380	library:19	print:1	supermaket:56
+131	classroom:4	dininghall:47	dormitory:17	library:5	supermaket:18
+137	bus:4	classroom:46	dininghall:274	dormitory:135	library:5	print:1	supermaket:73
+499	dininghall:15	dormitory:19	supermaket:7
+135	bus:26	classroom:114	dininghall:276	dormitory:183	library:1	print:2	supermaket:55
+134	bus:8	classroom:11	dininghall:430	dormitory:258	library:44	supermaket:69
+139	classroom:10	dininghall:293	dormitory:83	supermaket:86
+497	dininghall:7	dormitory:4	supermaket:1
+492	classroom:13	dininghall:382	dormitory:216	library:5	print:2	supermaket:27
+25	classroom:5	dininghall:38	dormitory:28	library:4	supermaket:3
+20	dininghall:8	dormitory:4
+21	dininghall:23	dormitory:8	library:2
+22	bus:9	dininghall:267	dormitory:92	library:2	supermaket:23
+28	dininghall:237	dormitory:53	supermaket:60
+407	bus:3	classroom:27	dininghall:167	dormitory:250	library:2	supermaket:84
+405	dininghall:13	dormitory:11	supermaket:2
+403	classroom:17	dininghall:383	dormitory:123	library:5	supermaket:50
+401	bus:3	classroom:34	dininghall:217	dormitory:182	library:1	print:4	supermaket:46
+409	bus:5	dininghall:294	dormitory:224	library:16	supermaket:45
+379	bus:2	classroom:18	dininghall:134	dormitory:70	library:1	supermaket:19
+378	dormitory:1
+371	classroom:11	dininghall:135	dormitory:34	library:3	print:1	supermaket:5
+391	bus:2	classroom:2	dininghall:4	supermaket:1
+390	bus:10	dininghall:240	dormitory:87	supermaket:42
+397	bus:5	classroom:1	dininghall:332	dormitory:70	library:3	supermaket:40
+396	classroom:4	dininghall:36	dormitory:10	library:2	supermaket:5
+395	bus:1	dininghall:234	dormitory:116	library:3	supermaket:41
+83	bus:5	classroom:1	dininghall:190	dormitory:93	supermaket:97
+80	classroom:3	dininghall:307	dormitory:61	library:1	print:1	supermaket:21
+81	bus:1	dininghall:376	dormitory:95	library:8	print:4	supermaket:41
+87	dininghall:4	dormitory:1
+7	bus:9	classroom:9	dininghall:322	dormitory:152	library:14	print:1	supermaket:70
+245	bus:3	classroom:39	dininghall:428	dormitory:71	library:2	print:1	supermaket:4
+244	dininghall:7	dormitory:5
+247	dininghall:350	dormitory:83	library:1	supermaket:28
+246	classroom:8	dininghall:4	dormitory:9	supermaket:3
+241	dininghall:7	dormitory:2	supermaket:1
+240	dininghall:16	dormitory:19
+243	dininghall:7	dormitory:8	supermaket:2
+242	dininghall:6	dormitory:2
+249	bus:5	classroom:8	dininghall:351	dormitory:92	library:5	supermaket:55
+519	dininghall:7	supermaket:3
+511	classroom:1	dininghall:295	dormitory:11	library:2	supermaket:28
+510	bus:3	classroom:6	dininghall:255	dormitory:159	library:9	supermaket:84
+513	bus:5	classroom:42	dininghall:146	dormitory:69	library:31	supermaket:33
+512	classroom:4	dininghall:446	dormitory:182	supermaket:23
+515	dininghall:9	dormitory:9	library:3	supermaket:3
+517	bus:7	classroom:7	dininghall:383	dormitory:135	library:5	print:2	supermaket:81
+516	dininghall:32	dormitory:20	supermaket:8
+459	dininghall:7	dormitory:8	supermaket:4
+450	bus:11	classroom:48	dininghall:268	dormitory:138	library:3	print:3	supermaket:48
+451	bus:4	classroom:19	dininghall:347	dormitory:95	library:6	supermaket:19
+452	dininghall:6	dormitory:8	supermaket:2
+453	dininghall:3	dormitory:1	supermaket:5
+454	classroom:1	dininghall:5	dormitory:3	supermaket:1
+455	dininghall:13	dormitory:5	supermaket:2
+457	bus:2	dininghall:9	dormitory:2	supermaket:3
+179	dininghall:2	dormitory:1	print:2	supermaket:1
+177	bus:2	classroom:2	dininghall:95	dormitory:36	library:1	supermaket:38
+176	bus:1	classroom:77	dininghall:364	dormitory:172	library:17	print:2	supermaket:60
+175	bus:7	classroom:104	dininghall:165	dormitory:280	library:10	print:4	supermaket:76
+174	classroom:3	dininghall:163	dormitory:161	library:3	supermaket:36
+172	bus:2	dininghall:7	dormitory:13	library:3	print:1	supermaket:1
+171	bus:5	dininghall:237	dormitory:213	library:3	print:2	supermaket:150
+170	bus:6	dininghall:291	dormitory:89	library:29	supermaket:88
+182	dininghall:349	dormitory:46	library:21	supermaket:108
+183	bus:13	classroom:1	dininghall:446	dormitory:515	library:10	print:1	supermaket:64
+180	bus:7	classroom:1	dininghall:265	dormitory:131	library:4	print:1	supermaket:32
+181	bus:4	dininghall:425	dormitory:188	library:3	supermaket:84
+11	bus:3	dininghall:36	dormitory:13	library:1	supermaket:2
+12	classroom:6	dininghall:141	dormitory:60	library:6	supermaket:24
+15	dininghall:9	dormitory:2	supermaket:2
+14	dininghall:6	dormitory:4
+17	dininghall:210	dormitory:64	library:2	supermaket:13
+19	classroom:2	dininghall:26	dormitory:6	supermaket:2
+18	dininghall:11	dormitory:2	supermaket:1
+62	bus:3	classroom:18	dininghall:319	dormitory:93	supermaket:54
+322	bus:20	dininghall:229	dormitory:15	supermaket:8
+323	classroom:3	dininghall:39	dormitory:16	library:1	print:1	supermaket:14
+321	bus:1	dininghall:378	dormitory:103	library:16	supermaket:35
+326	classroom:1	dininghall:368	dormitory:152	library:1	supermaket:119
+327	dininghall:7	dormitory:5	supermaket:1
+325	bus:4	dininghall:19	dormitory:3
+328	bus:5	classroom:84	dininghall:515	dormitory:91	print:5	supermaket:32
+329	dininghall:9	dormitory:2	supermaket:4
+204	dininghall:329	dormitory:52	library:8	supermaket:124
+207	bus:1	classroom:12	dininghall:262	dormitory:53	library:4	print:4	supermaket:19
+206	bus:10	dininghall:309	dormitory:156	library:1	print:1	supermaket:75
+77	bus:16	classroom:24	dininghall:255	dormitory:190	library:1	supermaket:54
+75	classroom:1	dininghall:6	dormitory:2	library:3	supermaket:1
+74	bus:13	dininghall:350	dormitory:44	library:2	print:1	supermaket:20
+72	dininghall:4	dormitory:13	supermaket:1
+71	classroom:51	dininghall:362	dormitory:190	library:4	supermaket:26
+70	bus:11	classroom:13	dininghall:394	dormitory:106	library:2	supermaket:35
+78	bus:1	classroom:85	dininghall:318	dormitory:146	library:12	print:1	supermaket:31
+2	bus:1	dininghall:368	dormitory:123	library:2	supermaket:31
+8	bus:4	classroom:52	dininghall:499	dormitory:116	library:2	print:1	supermaket:53
+68	dininghall:6	dormitory:7	supermaket:4
+120	bus:1	classroom:45	dininghall:264	dormitory:42	library:2	print:1	supermaket:54
+121	classroom:13	dininghall:47	dormitory:6	library:2	supermaket:3
+124	dininghall:99	dormitory:95	library:1	supermaket:82
+125	dininghall:63	dormitory:19	supermaket:8
+126	classroom:1	dininghall:4	dormitory:14	supermaket:6
+127	dininghall:10	dormitory:12	supermaket:1
+128	bus:4	dininghall:258	dormitory:47	library:5	print:1	supermaket:39
+129	bus:2	classroom:3	dininghall:210	dormitory:294	library:2	supermaket:83
+414	bus:2	dininghall:224	dormitory:81	library:6	print:2	supermaket:39
+415	bus:3	classroom:6	dininghall:356	dormitory:79	library:1	print:4	supermaket:19
+417	dininghall:84	dormitory:64	library:2	supermaket:17
+411	classroom:2	dininghall:31	dormitory:17	supermaket:1
+498	dininghall:57	dormitory:36	supermaket:11
+418	bus:2	dininghall:15	dormitory:1	supermaket:5
+419	bus:1	dininghall:305	dormitory:163	library:1	supermaket:20
+318	bus:8	classroom:34	dininghall:234	dormitory:92	library:7	supermaket:79
+312	bus:5	dininghall:69	dormitory:97	library:1	print:1	supermaket:13
+311	bus:4	dininghall:242	dormitory:92	library:6	supermaket:22
+310	bus:5	classroom:8	dininghall:232	dormitory:128	library:4	supermaket:165
+316	classroom:1	dininghall:10	dormitory:24	library:1	supermaket:5
+315	bus:2	classroom:2	dininghall:21	dormitory:26	library:1	supermaket:2
+496	dininghall:16	dormitory:2	supermaket:1
+3	dininghall:15	dormitory:7	library:2	print:1	supermaket:1
+366	bus:13	dininghall:317	dormitory:174	supermaket:102
+367	bus:2	dininghall:218	dormitory:181	print:1	supermaket:17
+364	dininghall:2	dormitory:2	library:1
+365	bus:1	classroom:2	dininghall:384	dormitory:139	library:1	print:1	supermaket:61
+362	bus:6	classroom:56	dininghall:337	dormitory:112	library:6	supermaket:32
+363	bus:2	classroom:15	dininghall:359	dormitory:110	library:4	supermaket:28
+360	classroom:1	dininghall:20	dormitory:6	supermaket:1
+361	classroom:2	dininghall:369	dormitory:117	library:6	print:1	supermaket:55
+380	classroom:1	dininghall:360	dormitory:231	library:6	print:2	supermaket:12
+381	dininghall:18	dormitory:1
+383	classroom:2	dininghall:19	dormitory:6	supermaket:2
+387	dininghall:62	dormitory:52	supermaket:15
+388	dininghall:65	dormitory:69	library:2	supermaket:15
+60	bus:5	dininghall:283	dormitory:102	library:5	supermaket:18
+61	classroom:39	dininghall:225	dormitory:39	library:53	print:3	supermaket:27
+258	bus:2	classroom:8	dininghall:172	dormitory:62	library:8	print:1	supermaket:21
+259	dininghall:30	dormitory:5	library:1
+64	bus:35	dininghall:397	dormitory:257	library:11	print:1	supermaket:164
+65	dininghall:2	dormitory:2
+66	bus:3	classroom:4	dininghall:415	dormitory:344	library:6	supermaket:23
+252	bus:2	dininghall:285	dormitory:81	library:17	supermaket:43
+253	dininghall:359	dormitory:183	supermaket:56
+256	dininghall:11	dormitory:2	supermaket:6
+257	bus:1	classroom:30	dininghall:319	dormitory:52	print:2	supermaket:17
+254	bus:7	classroom:87	dininghall:296	dormitory:143	library:7	print:1	supermaket:25
+255	bus:1	dininghall:91	dormitory:9	supermaket:5
+509	dininghall:195	dormitory:49	supermaket:35
+506	bus:2	classroom:7	dininghall:260	dormitory:67	library:1	supermaket:57
+507	dininghall:18	dormitory:17	supermaket:1
+504	classroom:5	dininghall:392	dormitory:199	library:6	print:2	supermaket:89
+505	classroom:18	dininghall:335	dormitory:110	library:5	print:1	supermaket:28
+500	bus:7	classroom:61	dininghall:307	dormitory:130	library:13	supermaket:34
+501	dininghall:119	dormitory:83	supermaket:23
+469	bus:31	classroom:53	dininghall:260	dormitory:208	print:1	supermaket:38
+468	bus:5	classroom:6	dininghall:212	dormitory:44	library:4	print:1	supermaket:110
+465	bus:10	classroom:1	dininghall:349	dormitory:171	library:2	supermaket:37
+467	classroom:36	dininghall:126	dormitory:190	library:3	supermaket:28
+461	dininghall:9	dormitory:4	supermaket:1
+460	classroom:43	dininghall:52	dormitory:120	library:6	supermaket:16
+463	classroom:1	dininghall:262	dormitory:87	library:1	print:1	supermaket:63
+462	classroom:18	dininghall:22	dormitory:37	supermaket:5
+168	dininghall:405	dormitory:145	library:6	print:1	supermaket:19
+169	bus:3	dininghall:255	dormitory:158	supermaket:34
+164	classroom:17	dininghall:26	dormitory:16	library:1
+165	bus:13	classroom:18	dininghall:265	dormitory:113	library:1	supermaket:68
+166	classroom:1	dininghall:6	dormitory:9	supermaket:2
+161	bus:1	classroom:3	dininghall:270	dormitory:212	library:4	print:1	supermaket:59
+162	bus:17	classroom:1	dininghall:349	dormitory:45	print:2	supermaket:33
+163	dininghall:257	dormitory:60	library:1	supermaket:79
+357	bus:2	classroom:94	dininghall:358	dormitory:156	library:96	print:3	supermaket:62
+355	dininghall:14	dormitory:1	supermaket:4
+352	classroom:1	dininghall:19	dormitory:4	library:1
+359	dininghall:333	dormitory:174	library:1	print:1	supermaket:36
+217	dininghall:292	dormitory:97	library:17	print:1	supermaket:44
+214	classroom:2	dininghall:9	dormitory:4
+212	bus:6	classroom:40	dininghall:386	dormitory:56	library:4	supermaket:36
+213	classroom:5	dininghall:165	dormitory:91	library:2	supermaket:10
+210	bus:1	classroom:1	dininghall:269	dormitory:90	library:5	supermaket:50
+218	classroom:1	dininghall:9	dormitory:1	library:1	supermaket:2
+219	dininghall:519	dormitory:52	supermaket:4
+288	classroom:1	dininghall:346	dormitory:128	library:19	print:2	supermaket:30
+4	bus:8	dininghall:260	dormitory:109	library:6	supermaket:36
+281	bus:40	classroom:12	dininghall:431	dormitory:220	library:1	supermaket:26
+280	bus:4	dininghall:443	dormitory:9	library:1	supermaket:33
+283	classroom:2	dininghall:8	dormitory:12	supermaket:3
+282	dininghall:5	dormitory:4
+285	bus:1	dininghall:393	dormitory:144	library:8	supermaket:36
+284	dininghall:45	dormitory:76	supermaket:12
+287	dininghall:447	dormitory:18	library:6	supermaket:62
+262	dininghall:282	dormitory:123	library:2	supermaket:47
+261	bus:1	classroom:41	dininghall:269	dormitory:79	library:21	supermaket:35
+265	bus:2	dininghall:357	dormitory:87	library:9	supermaket:35
+264	classroom:4	dininghall:146	dormitory:53	library:1	supermaket:33
+268	classroom:13	dininghall:182	dormitory:89	library:12	print:1	supermaket:29
+59	classroom:6	dininghall:27	dormitory:10	supermaket:6
+58	bus:4	dininghall:259	dormitory:109	supermaket:41
+55	dininghall:10	dormitory:3	supermaket:4
+54	classroom:2	dininghall:29	dormitory:8	library:1	supermaket:4
+57	classroom:62	dininghall:208	dormitory:79	library:18	print:1	supermaket:4
+56	bus:2	dininghall:246	dormitory:121	library:5	supermaket:40
+51	bus:3	dininghall:408	dormitory:95	library:5	supermaket:86
+50	dininghall:404	dormitory:91	library:9	supermaket:51
+53	bus:18	dininghall:368	dormitory:170	library:2	supermaket:48
+52	dininghall:13	dormitory:2	library:4	supermaket:4
+536	bus:1	classroom:48	dininghall:58	dormitory:34	library:2	supermaket:10
+63	bus:4	dininghall:376	dormitory:178	library:4	supermaket:90
+533	classroom:3	dininghall:35	dormitory:10	library:1	supermaket:2
+532	classroom:2	dininghall:10	dormitory:3
+530	bus:5	classroom:6	dininghall:336	dormitory:87	library:6	supermaket:31
+538	classroom:4	dininghall:214	dormitory:53	supermaket:95
+115	dininghall:11	dormitory:3	supermaket:9
+114	bus:2	classroom:22	dininghall:541	dormitory:281	library:1	supermaket:29
+117	bus:20	classroom:2	dininghall:155	dormitory:28	supermaket:19
+116	bus:1	classroom:22	dininghall:332	dormitory:218	library:16	supermaket:68
+110	dininghall:31	dormitory:11	supermaket:2
+113	bus:3	classroom:6	dininghall:436	dormitory:147	library:1	supermaket:209
+112	dininghall:261	dormitory:81	print:1	supermaket:198
+118	dininghall:8	dormitory:7	supermaket:1
+429	bus:4	classroom:2	dininghall:239	dormitory:56	print:1	supermaket:41
+428	classroom:3	dininghall:358	dormitory:73	library:2	print:1	supermaket:24
+534	classroom:1	dininghall:115	dormitory:56	supermaket:35
+421	bus:2	classroom:16	dininghall:82	dormitory:82	library:4	supermaket:54
+420	dininghall:14	dormitory:3
+425	classroom:12	dininghall:269	dormitory:205	library:1	supermaket:76
+424	classroom:5	dininghall:351	dormitory:81	library:5	supermaket:30
+427	dininghall:14	supermaket:2
+426	bus:5	classroom:1	dininghall:353	dormitory:153	library:3	supermaket:40
+309	dininghall:300	dormitory:116	library:4	supermaket:48
+300	classroom:10	dininghall:482	dormitory:198	library:18	print:4	supermaket:76
+301	bus:2	classroom:2	dininghall:358	dormitory:65	print:2	supermaket:65
+302	classroom:5	dininghall:29	dormitory:4	print:1	supermaket:4
+304	classroom:6	dininghall:297	dormitory:55	library:10	supermaket:103
+306	classroom:1	dininghall:8	dormitory:4	library:1
+307	dininghall:268	dormitory:128	print:2	supermaket:29
+229	bus:2	classroom:19	dininghall:238	dormitory:191	library:2	supermaket:75
+226	bus:3	classroom:3	dininghall:159	dormitory:33	library:2	print:5	supermaket:17
+225	bus:2	classroom:2	dininghall:281	dormitory:118	library:34	supermaket:19
+224	classroom:3	dininghall:79	dormitory:4	print:1	supermaket:3
+222	bus:2	classroom:10	dininghall:499	dormitory:136	library:1	supermaket:49
+88	bus:1	classroom:11	dininghall:405	dormitory:126	library:6	print:2	supermaket:13
+89	classroom:1	dininghall:278	dormitory:250	library:1	print:1	supermaket:79
+151	classroom:3	dininghall:12	dormitory:7	library:2	supermaket:3
+150	bus:1	classroom:1	dininghall:352	dormitory:253	library:1	print:2	supermaket:22
+157	bus:1	dininghall:275	dormitory:68	library:5	print:1	supermaket:57
+159	dininghall:29	dormitory:12
+158	dininghall:421	dormitory:85	library:2	supermaket:45
+399	dininghall:210	dormitory:81	library:26	print:2	supermaket:103
+398	bus:3	classroom:15	dininghall:68	dormitory:18	library:2	supermaket:21
+48	dininghall:13	dormitory:9	supermaket:1
+49	classroom:8	dininghall:33	dormitory:29	library:2	supermaket:1
+46	bus:7	classroom:42	dininghall:331	dormitory:277	library:19	supermaket:101
+47	bus:15	classroom:2	dininghall:301	dormitory:61	library:3	supermaket:36
+44	bus:4	dininghall:251	dormitory:109	library:3	supermaket:49
+41	bus:2	classroom:36	dininghall:347	dormitory:191	library:9	print:2	supermaket:21
+489	dininghall:275	dormitory:191	library:1	supermaket:14
+484	bus:1	classroom:7	dininghall:354	dormitory:211	library:6	print:1	supermaket:14
+482	dininghall:20	dormitory:8	supermaket:4
+481	bus:4	classroom:28	dininghall:339	dormitory:88	library:11	supermaket:22
+480	dininghall:13	dormitory:9	supermaket:3
+473	bus:3	dininghall:367	dormitory:87	library:8	supermaket:83
+470	bus:3	dininghall:63	dormitory:60	supermaket:5
+471	bus:6	dininghall:329	dormitory:56	library:3	supermaket:26
+476	bus:2	classroom:4	dininghall:431	dormitory:108	library:7	print:2	supermaket:50
+477	dininghall:21	dormitory:10
+474	bus:1	dininghall:345	dormitory:96	library:1	supermaket:35
+475	bus:1	classroom:9	dininghall:222	dormitory:238	library:6	print:1	supermaket:71
+479	dininghall:13	dormitory:7	library:2	supermaket:2

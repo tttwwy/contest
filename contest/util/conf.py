@@ -8,7 +8,6 @@ setting = None
 def get_config_path(path=''):
     ENVIRONMENT_VARIABLE = 'RECSYS_SETTINGS_MODULE'
     if path:
-        print path
         setting_path = os.path.splitext(path)[0]
     else:
         setting_path = os.path.splitext(os.environ[ENVIRONMENT_VARIABLE])[0]
@@ -19,7 +18,6 @@ def get_config_path(path=''):
         basename = 'setting'
     sys.path.insert(0,dirname)
     setting = importlib.import_module(basename)
-    print "test",setting.log_path
     return setting
 
 def set_config_path(path=''):

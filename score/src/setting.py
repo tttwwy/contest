@@ -3,5 +3,5 @@
 
 log_path = 'G:/Program/python/contest/score/log/log'
 train_log_path = 'G:/Program/python/contest/score/log/train_log'
-label_file_path = 'G:/Program/python/contest/score/feature/train/uid_term3_1.txt'
+label_file_path = 'G:/Program/python/contest/score/feature/uid_term3_score1.txt'
 default_label = '0'

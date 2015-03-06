@@ -1,0 +1,369 @@
+344	bus:4.0	classroom:0.16	dininghall:28.7	dormitory:5.9
+346	bus:6.0	classroom:2.02	dininghall:467.61	dormitory:52.54	library:84.3	supermaket:173.9
+347	bus:1.0	classroom:0.66	dininghall:850.86	dormitory:56.63	library:4.2	supermaket:198.9
+340	classroom:0.22	dininghall:583.95	dormitory:35.6	library:340.1	supermaket:14.2
+341	bus:2.0	classroom:0.33	dininghall:661.01	dormitory:18.4	library:24.9	supermaket:125.2
+343	bus:4.0	classroom:0.03	dininghall:1328.86	dormitory:26.68	library:6.2	print:7.05	supermaket:432.8
+298	bus:84.0	dininghall:1331.06	dormitory:11.45	print:1.05	supermaket:178.7
+299	bus:5.0	dininghall:1637.71	dormitory:83.6	supermaket:538.5
+296	bus:1.0	dininghall:18.4
+297	bus:4.0	classroom:1.14	dininghall:1030.36	dormitory:69.23	library:11.9	supermaket:119.28
+294	classroom:0.05	dininghall:35.1	dormitory:3.8	supermaket:3.5
+292	classroom:0.07	dininghall:49.3	dormitory:6.92	library:11.3
+290	bus:1.0	dininghall:36.0	dormitory:1.3	supermaket:29.6
+291	classroom:0.04	dininghall:238.12	dormitory:9.6	library:6.8	supermaket:35.0
+195	classroom:0.18	dininghall:84.24	dormitory:14.17	supermaket:77.8
+194	dininghall:1436.17	dormitory:37.73	supermaket:716.6
+197	classroom:0.11	dininghall:1688.84	dormitory:148.31	library:17.2	print:0.6	supermaket:818.3
+196	bus:6.0	classroom:0.55	dininghall:1459.54	dormitory:54.54	library:46.6	print:3.0	supermaket:203.7
+192	classroom:0.07	dininghall:60.7	dormitory:5.11	supermaket:4.0
+272	bus:4.0	classroom:0.16	dininghall:1260.83	dormitory:26.6	print:2.1	supermaket:94.6
+276	bus:17.0	dininghall:1590.2	dormitory:49.24	library:34.0	print:0.15	supermaket:641.6
+277	classroom:0.03	dininghall:154.2	dormitory:5.42	library:14.5	supermaket:59.5
+278	dininghall:18.2	dormitory:0.8
+279	classroom:0.02	dininghall:80.36	dormitory:9.6	supermaket:13.3
+526	classroom:0.34	dininghall:1232.53	dormitory:29.21	library:61.8	print:0.75	supermaket:524.5
+520	bus:6.0	classroom:1.55	dininghall:1641.41	dormitory:102.26	library:4.5	supermaket:247.5
+521	bus:12.0	classroom:0.43	dininghall:1364.32	dormitory:83.8	library:4.26	print:2.55	supermaket:595.2
+522	bus:13.0	classroom:0.12	dininghall:973.11	dormitory:60.4	library:43.5	print:1.2	supermaket:299.4
+523	bus:20.0	classroom:0.3	dininghall:765.93	dormitory:107.4	library:12.8	supermaket:680.0
+528	classroom:0.74	dininghall:1305.52	dormitory:52.29	library:343.7	print:1.95	supermaket:478.2
+529	bus:4.0	classroom:0.01	dininghall:1140.9	dormitory:68.28	library:45.4	supermaket:106.4
+448	bus:8.0	classroom:0.03	dininghall:905.14	dormitory:23.9	library:41.5	print:3.0	supermaket:320.3
+443	bus:1.0	classroom:0.02	dininghall:1335.29	dormitory:60.79	library:41.0	supermaket:1053.14
+441	bus:4.0	classroom:0.13	dininghall:1499.83	dormitory:141.13	library:2.8	supermaket:38.8
+440	classroom:0.04	dininghall:13.7	dormitory:6.29
+447	bus:1.0	classroom:0.48	dininghall:1274.44	dormitory:62.2	library:94.1	supermaket:1028.2
+446	classroom:2.97	dininghall:1538.28	dormitory:74.66	library:49.0	print:5.1	supermaket:272.0
+445	bus:5.0	classroom:0.02	dininghall:712.3	dormitory:135.31	library:1.0	supermaket:567.56
+108	dininghall:8.1	dormitory:2.31	library:4.0
+109	bus:16.0	dininghall:844.37	dormitory:50.98	print:0.3	supermaket:1403.9
+102	dininghall:84.3	dormitory:12.67
+103	bus:63.0	classroom:0.05	dininghall:969.49	dormitory:48.34	supermaket:235.3
+106	classroom:0.79	dininghall:1446.62	dormitory:35.79	library:28.5	supermaket:140.22
+107	dininghall:54.8	supermaket:24.8
+104	classroom:0.41	dininghall:1349.35	dormitory:74.33	library:50.3	print:45.65	supermaket:215.3
+105	bus:9.0	classroom:0.04	dininghall:1539.61	dormitory:43.77	print:0.3	supermaket:405.3
+38	classroom:0.01	dininghall:836.03	dormitory:18.74	print:1.5	supermaket:322.7
+33	dininghall:46.8	dormitory:10.77	supermaket:27.2
+32	bus:80.0	classroom:0.05	dininghall:1613.38	dormitory:67.4	supermaket:193.2
+31	dininghall:979.81	dormitory:117.07	library:19.6	print:1.05	supermaket:276.7
+30	bus:14.0	classroom:0.08	dininghall:1403.65	dormitory:32.98	library:17.2	supermaket:549.24
+37	bus:2.0	dininghall:1450.75	dormitory:118.56	library:2.8	supermaket:332.3
+35	bus:4.0	classroom:0.7	dininghall:1009.26	dormitory:102.43	library:11.0	supermaket:120.2
+34	bus:6.0	classroom:0.05	dininghall:1365.01	dormitory:47.7	print:0.75	supermaket:869.1
+438	bus:4.0	classroom:0.52	dininghall:1078.76	dormitory:51.8	library:1.1	print:0.15	supermaket:310.4
+439	dininghall:697.09	dormitory:21.27	library:10.6	supermaket:172.4
+435	classroom:0.09	dininghall:1151.22	dormitory:103.95	library:1.8	print:0.15	supermaket:236.54
+433	bus:2.0	classroom:0.05	dininghall:1821.37	dormitory:70.8	library:88.1	print:0.9	supermaket:447.8
+431	dininghall:516.13	dormitory:19.77	supermaket:999.6
+339	classroom:3.47	dininghall:1643.53	dormitory:92.71	library:9.7	supermaket:351.0
+338	bus:1.0	classroom:0.05	dininghall:1930.0	dormitory:50.02	supermaket:263.5
+334	classroom:0.01	dininghall:44.89	dormitory:4.83	library:10.6
+331	bus:3.0	classroom:0.33	dininghall:1151.65	dormitory:93.82	library:67.4	supermaket:270.0
+330	bus:39.0	classroom:0.34	dininghall:402.59	dormitory:119.07	supermaket:324.3
+333	dininghall:126.23	dormitory:7.84	library:16.5	supermaket:6.5
+332	bus:8.0	classroom:0.04	dininghall:1849.79	dormitory:72.84	library:38.0	supermaket:604.38
+99	classroom:2.11	dininghall:1784.03	dormitory:104.87	print:0.75	supermaket:680.1
+90	dininghall:1120.84	dormitory:142.37	supermaket:341.7
+93	bus:6.0	dininghall:525.93	dormitory:67.38	library:29.86	supermaket:841.0
+92	supermaket:64.0
+97	bus:7.0	classroom:0.33	dininghall:960.29	dormitory:88.92	library:18.9	supermaket:320.93
+238	bus:4.0	classroom:0.06	dininghall:1492.27	dormitory:22.01	library:0.64	supermaket:236.6
+239	dininghall:7.13
+234	bus:8.0	classroom:0.04	dininghall:202.9	dormitory:8.9	supermaket:68.85
+235	bus:13.0	classroom:0.23	dininghall:1270.14	dormitory:80.4	library:30.6	supermaket:228.85
+236	bus:8.0	dininghall:1929.83	dormitory:20.8	supermaket:126.3
+237	dininghall:65.3	dormitory:4.8	library:43.8	supermaket:11.2
+230	bus:9.0	classroom:0.82	dininghall:1918.0	dormitory:95.34	library:14.3	print:8.25	supermaket:505.1
+231	bus:5.0	classroom:0.01	dininghall:884.36	dormitory:16.38	library:19.7	supermaket:249.1
+232	bus:1.0	classroom:0.13	dininghall:2657.97	dormitory:123.85	library:581.9	supermaket:999.1
+233	dininghall:1570.9	dormitory:39.06	print:1.2	supermaket:537.3
+1	classroom:0.81	dininghall:1665.62	dormitory:14.05	library:2.5	supermaket:417.15
+146	bus:4.0	classroom:0.51	dininghall:1138.4	dormitory:127.52	library:14.4	supermaket:85.0
+144	classroom:0.3	dininghall:650.61	dormitory:60.6	library:24.3	supermaket:43.6
+142	bus:4.0	classroom:0.12	dininghall:19.13	dormitory:2.25	supermaket:39.3
+140	bus:4.0	classroom:0.01	dininghall:1398.32	dormitory:75.72	library:27.7	supermaket:335.2
+148	bus:3.0	classroom:0.08	dininghall:1688.94	dormitory:74.78	library:21.3	print:20.6	supermaket:243.5
+149	classroom:0.02	dininghall:132.02	dormitory:4.49	library:16.3	supermaket:17.6
+132	bus:9.0	classroom:2.96	dininghall:1576.0	dormitory:274.9	library:40.7	supermaket:201.1
+131	classroom:0.07	dininghall:154.78	dormitory:9.97	library:15.44	supermaket:166.8
+137	bus:1.0	classroom:0.41	dininghall:1325.73	dormitory:89.66	library:53.0	supermaket:349.7
+499	dininghall:484.2	dormitory:42.37	supermaket:371.2
+135	bus:93.0	classroom:0.93	dininghall:2428.53	dormitory:157.42	library:78.4	print:6.75	supermaket:670.2
+134	bus:8.0	classroom:0.93	dininghall:1963.2	dormitory:233.05	library:15.0	print:1.5	supermaket:524.6
+494	classroom:0.02	dininghall:19.63	dormitory:0.06	library:0.4	supermaket:11.5
+139	bus:11.0	classroom:0.16	dininghall:1521.01	dormitory:31.38	library:4.0	print:24.15	supermaket:540.61
+497	classroom:0.08	dininghall:37.19	dormitory:3.85	library:4.0
+490	bus:2.0	classroom:0.04	dininghall:365.72	dormitory:34.83	supermaket:72.84
+491	dininghall:72.89	dormitory:5.02
+492	bus:9.0	classroom:0.3	dininghall:1326.51	dormitory:32.08	library:79.1	supermaket:74.2
+493	classroom:0.01	dininghall:76.5	dormitory:3.56	supermaket:16.8
+20	dininghall:114.3	dormitory:8.38	supermaket:13.3
+21	dininghall:23.4	dormitory:3.4
+22	bus:32.0	classroom:0.05	dininghall:1259.49	dormitory:36.18	library:10.1	supermaket:240.5
+23	dininghall:27.4	dormitory:0.7
+28	bus:2.0	dininghall:1105.66	dormitory:40.92	library:8.0	print:6.15	supermaket:371.2
+407	bus:13.0	classroom:0.19	dininghall:596.05	dormitory:108.81	print:9.0	supermaket:475.0
+406	dininghall:33.83	dormitory:0.01
+404	bus:29.0	classroom:0.03	dininghall:802.96	dormitory:51.58	library:29.9	print:1.0	supermaket:206.9
+403	bus:14.0	classroom:0.56	dininghall:1310.68	dormitory:72.14	library:29.3	print:2.1	supermaket:344.2
+401	bus:18.0	classroom:0.36	dininghall:1040.65	dormitory:102.56	library:27.4	print:3.0	supermaket:191.6
+400	bus:32.0	classroom:0.04	dininghall:1015.11	dormitory:66.09	library:25.5	supermaket:220.48
+409	bus:10.0	dininghall:1654.42	dormitory:164.06	library:0.2	supermaket:160.6
+408	dininghall:286.81	dormitory:19.29	library:55.0	supermaket:49.6
+379	bus:28.0	dininghall:1873.6	dormitory:113.29	library:45.3	print:1.15	supermaket:618.3
+371	classroom:1.45	dininghall:1286.99	dormitory:59.58	library:11.7	print:8.7	supermaket:24.6
+370	dininghall:61.9	dormitory:7.31	supermaket:49.1
+374	classroom:0.08	dininghall:73.0	dormitory:0.1	supermaket:18.4
+88	classroom:0.06	dininghall:1872.93	dormitory:45.39	library:13.8	print:0.6	supermaket:118.2
+390	bus:14.0	dininghall:2442.53	dormitory:133.1	library:5.8	supermaket:816.8
+397	bus:14.0	dininghall:1353.5	dormitory:61.84	library:6.4	print:0.15	supermaket:388.8
+395	bus:7.0	classroom:0.1	dininghall:1082.23	dormitory:46.74	print:1.05	supermaket:203.8
+83	dininghall:649.03	dormitory:41.48	supermaket:531.0
+399	bus:20.0	dininghall:1441.96	dormitory:128.75	library:377.8	print:3.0	supermaket:752.2
+81	dininghall:34.0	supermaket:101.6
+86	bus:5.0	classroom:0.02	dininghall:857.32	dormitory:45.57	print:1.35	supermaket:102.9
+87	bus:16.0	classroom:0.83	dininghall:1118.95	dormitory:54.09	library:506.7	supermaket:200.2
+84	dininghall:55.2	dormitory:2.7
+7	bus:5.0	classroom:0.01	dininghall:1728.21	dormitory:88.52	library:15.2	supermaket:490.69
+245	bus:5.0	classroom:1.65	dininghall:1364.11	dormitory:53.49	library:1.9	supermaket:122.1
+244	bus:1.0	classroom:0.04	dininghall:56.73	dormitory:0.31	supermaket:10.8
+247	classroom:0.23	dininghall:1524.14	dormitory:32.17	library:4.0	supermaket:224.0
+242	bus:4.0	classroom:0.14	dininghall:40.83	dormitory:6.45	supermaket:18.0
+249	bus:18.0	classroom:0.37	dininghall:1140.69	dormitory:34.73	library:109.6	supermaket:267.7
+519	dininghall:56.23	dormitory:0.9	supermaket:32.7
+511	bus:10.0	classroom:0.05	dininghall:811.96	dormitory:7.4	library:12.24	supermaket:215.7
+510	classroom:0.16	dininghall:1325.08	dormitory:72.66	library:8.7	supermaket:639.4
+513	classroom:1.58	dininghall:1499.74	dormitory:83.35	library:213.9	supermaket:360.3
+512	classroom:0.09	dininghall:2302.3	dormitory:143.42	library:2.7	supermaket:302.4
+517	bus:1.0	dininghall:1194.04	dormitory:67.49	library:11.8	print:0.15	supermaket:456.0
+516	dininghall:123.77	dormitory:1.62	supermaket:4.0
+458	bus:6.0	classroom:0.63	dininghall:1567.33	dormitory:20.94	library:9.6	print:6.75	supermaket:159.3
+459	classroom:0.08	dininghall:103.98	dormitory:8.43	library:5.0	supermaket:30.4
+450	bus:9.0	classroom:0.9	dininghall:1234.45	dormitory:127.96	library:10.2	print:0.75	supermaket:589.5
+451	bus:8.0	classroom:0.57	dininghall:1589.96	dormitory:74.6	library:36.1	supermaket:60.4
+452	dininghall:92.86	dormitory:11.94	supermaket:49.2
+454	dininghall:8.3	dormitory:4.0	supermaket:24.0
+456	dininghall:741.0	dormitory:22.25	print:4.2	supermaket:274.6
+178	classroom:0.03	dininghall:442.7	dormitory:15.16	library:16.9	supermaket:250.0
+177	bus:4.0	dininghall:1070.46	dormitory:23.46	supermaket:370.3
+176	bus:4.0	classroom:2.12	dininghall:1566.28	dormitory:90.93	library:38.1	print:3.15	supermaket:255.8
+175	bus:11.0	classroom:2.1	dininghall:740.49	dormitory:75.61	library:43.4	print:2.75	supermaket:551.5
+174	classroom:0.02	dininghall:1024.55	dormitory:113.27	library:0.8	supermaket:645.9
+173	dininghall:46.1	dormitory:0.18	supermaket:3.8
+172	bus:21.0	classroom:0.02	dininghall:2033.42	dormitory:140.51	library:140.3	print:2.1	supermaket:434.2
+171	classroom:0.01	dininghall:1075.09	dormitory:41.85	library:2.2	supermaket:432.4
+170	dininghall:1292.8	dormitory:115.51	library:77.8	supermaket:722.6
+253	classroom:0.05	dininghall:1293.49	dormitory:121.89	supermaket:278.41
+182	bus:17.0	classroom:0.02	dininghall:2079.91	dormitory:55.9	library:61.3	supermaket:732.1
+183	bus:9.0	dininghall:1493.15	dormitory:190.75	supermaket:362.8
+180	bus:26.0	dininghall:876.41	dormitory:65.37	library:56.5	print:1.25	supermaket:126.0
+181	bus:16.0	dininghall:1156.11	dormitory:64.62	supermaket:457.0
+187	dininghall:28.2	dormitory:2.81
+189	dininghall:58.13	dormitory:6.9
+11	bus:4.0	dininghall:115.43	dormitory:6.0	print:4.8	supermaket:6.5
+10	classroom:0.1	dininghall:104.0	dormitory:14.99	library:16.2	supermaket:10.8
+12	classroom:0.2	dininghall:1443.48	dormitory:71.01	library:22.1	supermaket:207.5
+14	dininghall:26.8	dormitory:0.01	supermaket:9.8
+17	dininghall:1228.27	dormitory:56.96	library:11.0	supermaket:133.6
+19	classroom:1.04	dininghall:708.82	dormitory:19.5	library:44.2	print:6.75	supermaket:62.3
+62	classroom:0.2	dininghall:1024.49	dormitory:34.51	print:0.15	supermaket:250.3
+322	bus:24.0	dininghall:1513.13	dormitory:29.11	supermaket:173.3
+323	bus:23.0	classroom:0.51	dininghall:1936.28	dormitory:105.42	library:28.8	supermaket:383.3
+321	dininghall:1820.32	dormitory:117.0	library:20.3	print:0.45	supermaket:620.7
+326	bus:1.0	dininghall:1326.65	dormitory:86.3	supermaket:1165.98
+324	dininghall:174.2	dormitory:2.1	library:4.0	supermaket:48.7
+328	bus:8.0	classroom:2.59	dininghall:1487.75	dormitory:45.1	library:58.3	print:5.4	supermaket:97.9
+203	dininghall:450.79	dormitory:27.25	print:0.6	supermaket:435.7
+204	bus:20.0	dininghall:1331.43	dormitory:35.27	library:32.6	supermaket:504.5
+207	bus:4.0	classroom:0.21	dininghall:994.89	dormitory:33.62	library:6.3	print:20.05	supermaket:123.9
+206	bus:32.0	dininghall:1027.04	dormitory:77.15	library:11.3	supermaket:515.4
+77	bus:1.0	classroom:0.37	dininghall:1400.53	dormitory:74.85	library:5.34	supermaket:950.3
+75	bus:11.0	classroom:0.13	dininghall:209.66	dormitory:9.51	library:33.7	supermaket:63.9
+74	bus:8.0	classroom:0.01	dininghall:1786.83	dormitory:11.27	library:14.2	supermaket:77.9
+73	dininghall:33.1	dormitory:1.01
+72	classroom:1.17	dininghall:1604.41	dormitory:203.23	supermaket:349.6
+71	bus:4.0	classroom:2.49	dininghall:1334.2	dormitory:65.42	library:6.4	print:1.8	supermaket:255.6
+70	bus:7.0	classroom:0.09	dininghall:1485.37	dormitory:58.7	library:7.1	print:8.55	supermaket:425.81
+79	classroom:0.05	dininghall:241.8	dormitory:12.8	print:2.85	supermaket:81.6
+78	bus:4.0	classroom:0.28	dininghall:1347.33	dormitory:30.26	library:6.8	supermaket:87.6
+2	bus:4.0	classroom:0.06	dininghall:1570.8	dormitory:78.69	supermaket:228.7
+8	bus:1.0	classroom:1.61	dininghall:1941.81	dormitory:33.32	library:4.1	print:12.6	supermaket:601.4
+120	bus:13.0	classroom:0.75	dininghall:1320.46	dormitory:14.78	library:29.3	print:0.6	supermaket:93.0
+121	classroom:0.04	dininghall:53.2	dormitory:0.51
+122	bus:12.0	classroom:2.04	dininghall:1329.98	dormitory:62.44	library:18.0	supermaket:273.8
+124	bus:16.0	classroom:0.01	dininghall:1333.05	dormitory:88.17	supermaket:699.5
+125	classroom:0.03	dininghall:1530.64	dormitory:88.83	library:2.2	supermaket:449.7
+128	bus:1.0	classroom:0.09	dininghall:1729.37	dormitory:39.51	library:86.96	supermaket:302.4
+129	bus:1.0	classroom:0.25	dininghall:873.0	dormitory:173.59	supermaket:557.0
+414	bus:9.0	dininghall:1992.84	dormitory:112.07	library:12.1	print:13.2	supermaket:538.1
+415	classroom:0.31	dininghall:1231.01	dormitory:26.69	library:14.5	print:1.5	supermaket:284.5
+417	bus:4.0	classroom:0.01	dininghall:1358.94	dormitory:43.88	library:7.9	supermaket:283.8
+498	bus:11.0	classroom:0.89	dininghall:1529.05	dormitory:93.87	library:5.0	print:0.75	supermaket:126.6
+419	bus:1.0	dininghall:1915.4	dormitory:5.59	print:7.65	supermaket:195.9
+318	bus:2.0	classroom:0.63	dininghall:1338.31	dormitory:103.65	library:105.62	supermaket:790.2
+312	bus:37.0	dininghall:944.16	dormitory:40.25	library:4.0	print:1.3	supermaket:597.5
+311	bus:18.0	dininghall:1148.98	dormitory:18.5	library:3.0	supermaket:362.9
+310	bus:6.0	classroom:0.03	dininghall:1159.3	dormitory:112.95	library:53.3	print:55.8	supermaket:922.38
+317	dininghall:457.88	dormitory:39.0	library:43.92	supermaket:208.4
+316	bus:1.0	classroom:0.02	dininghall:662.05	dormitory:26.22	library:8.4	print:1.5	supermaket:63.0
+314	dininghall:62.8	dormitory:1.1	library:1.2	supermaket:104.4
+138	classroom:0.03	dininghall:1234.2	dormitory:37.1	supermaket:157.5
+368	dininghall:214.6	dormitory:44.9	supermaket:775.5
+369	dininghall:38.9	library:1.2	print:0.15
+366	bus:35.0	dininghall:1519.17	dormitory:129.35	supermaket:973.7
+367	bus:4.0	classroom:0.02	dininghall:1578.83	dormitory:20.38	print:3.0	supermaket:307.0
+364	bus:20.0	classroom:0.23	dininghall:1539.85	dormitory:69.54	library:41.4	print:7.2	supermaket:605.7
+365	bus:4.0	classroom:0.2	dininghall:1153.39	dormitory:95.52	library:2.3	print:28.0	supermaket:305.5
+362	bus:4.0	classroom:0.21	dininghall:1499.0	dormitory:55.83	library:5.4	supermaket:428.1
+363	bus:4.0	classroom:0.12	dininghall:1199.7	dormitory:127.39	library:10.2	print:17.7	supermaket:61.5
+360	dininghall:63.18	dormitory:2.4	supermaket:18.0
+361	bus:1.0	classroom:0.6	dininghall:1764.84	dormitory:73.34	library:14.5	print:0.45	supermaket:406.67
+380	classroom:0.52	dininghall:1424.01	dormitory:83.27	library:2.2	supermaket:341.1
+381	bus:15.0	classroom:0.01	dininghall:2056.51	dormitory:45.73	library:27.6	supermaket:481.6
+383	classroom:0.01	dininghall:31.3	dormitory:2.42	print:15.9
+384	dininghall:10.66
+387	dormitory:1.2
+388	classroom:0.27	dininghall:2027.48	dormitory:157.48	library:210.1	print:18.75	supermaket:487.5
+60	bus:44.0	dininghall:1740.32	dormitory:74.48	library:12.3	print:0.75	supermaket:334.5
+61	bus:22.0	classroom:0.97	dininghall:1267.95	dormitory:37.9	library:121.5	supermaket:281.2
+258	bus:25.0	classroom:0.55	dininghall:1809.62	dormitory:82.88	library:97.86	print:19.35	supermaket:487.2
+259	bus:1.0	classroom:0.18	dininghall:1808.86	dormitory:120.56	library:21.8	supermaket:510.1
+64	bus:64.0	classroom:0.01	dininghall:1615.88	dormitory:290.72	library:100.6	supermaket:1504.14
+66	dininghall:1696.48	dormitory:42.17	library:37.9	print:1.05	supermaket:419.65
+252	bus:5.0	classroom:0.04	dininghall:1111.11	dormitory:32.05	library:30.4	supermaket:366.7
+69	classroom:0.04	dininghall:77.94	dormitory:4.82	supermaket:13.6
+251	bus:4.0	dininghall:1164.0	dormitory:55.74	supermaket:109.5
+256	dininghall:14.3	dormitory:0.8
+257	bus:4.0	classroom:0.2	dininghall:821.54	dormitory:2.27	supermaket:114.7
+254	bus:30.0	classroom:1.05	dininghall:747.91	dormitory:97.74	library:7.6	print:1.2	supermaket:109.36
+255	bus:5.0	classroom:0.01	dininghall:1880.87	dormitory:54.98	library:2.3	supermaket:170.4
+508	dininghall:22.2	dormitory:0.02
+509	bus:8.0	classroom:0.04	dininghall:1631.94	dormitory:65.56	library:7.6	supermaket:426.25
+506	classroom:0.09	dininghall:1224.32	dormitory:45.03	library:2.2	print:1.5	supermaket:312.6
+504	classroom:0.1	dininghall:1365.17	dormitory:100.94	library:24.0	print:0.6	supermaket:759.2
+505	bus:8.0	classroom:0.36	dininghall:1379.53	dormitory:59.68	library:29.8	print:15.05	supermaket:156.2
+502	bus:1.0	dininghall:2123.3	dormitory:25.78	print:1.5	supermaket:458.0
+503	classroom:0.11	dininghall:78.6	dormitory:1.6
+500	bus:12.0	classroom:0.88	dininghall:1332.66	dormitory:64.97	library:63.9	supermaket:196.4
+501	classroom:0.01	dininghall:1582.82	dormitory:116.73	library:4.4	supermaket:600.3
+469	bus:120.0	classroom:0.68	dininghall:1458.1	dormitory:59.74	library:38.7	supermaket:361.0
+468	bus:1.0	dininghall:413.5	dormitory:128.18	library:11.0	print:2.7	supermaket:718.6
+465	bus:20.0	classroom:0.06	dininghall:735.96	dormitory:41.88	library:49.9	print:1.2	supermaket:78.7
+464	dininghall:12.4
+467	bus:6.0	classroom:1.29	dininghall:789.35	dormitory:152.49	library:31.4	supermaket:164.2
+460	bus:1.0	classroom:0.96	dininghall:592.05	dormitory:63.51	library:10.9	supermaket:88.8
+463	dininghall:1481.32	dormitory:60.49	library:10.0	supermaket:221.8
+462	bus:2.0	classroom:2.31	dininghall:1090.37	dormitory:66.77	library:28.0	supermaket:338.0
+168	bus:6.0	dininghall:1406.09	dormitory:171.19	library:12.3	print:3.0	supermaket:119.8
+169	bus:2.0	dininghall:1287.21	dormitory:58.26	library:4.0	supermaket:204.0
+165	bus:24.0	classroom:1.78	dininghall:1301.01	dormitory:96.63	library:2.6	supermaket:679.0
+166	classroom:0.18	dininghall:39.73	dormitory:6.0	supermaket:2.0
+161	bus:10.0	classroom:0.32	dininghall:851.91	dormitory:86.62	library:40.9	print:1.05	supermaket:261.7
+162	bus:6.0	classroom:0.07	dininghall:1721.9	dormitory:29.19	print:0.3	supermaket:145.3
+163	dininghall:1583.35	dormitory:12.74	library:40.6	supermaket:651.0
+9	bus:4.0	dininghall:2039.75	dormitory:83.8	library:8.7	supermaket:409.7
+357	bus:2.0	classroom:2.12	dininghall:1353.42	dormitory:74.83	library:319.0	supermaket:559.4
+355	dininghall:50.9	dormitory:2.7	library:2.9	supermaket:35.3
+354	classroom:0.05	dininghall:101.63	dormitory:0.51	library:12.1	supermaket:55.3
+351	dininghall:28.3	dormitory:2.72
+359	bus:4.0	dininghall:1251.16	dormitory:110.11	print:3.3	supermaket:89.0
+358	classroom:0.06	dininghall:39.2	dormitory:1.7
+217	dininghall:1334.14	dormitory:80.47	library:48.3	print:3.6	supermaket:452.5
+215	classroom:0.01	dininghall:61.93	dormitory:5.12
+212	classroom:1.89	dininghall:2016.4	dormitory:38.02	library:30.9	print:1.05	supermaket:465.0
+213	bus:3.0	classroom:0.13	dininghall:1664.72	dormitory:116.72	library:23.1	supermaket:276.8
+210	bus:3.0	classroom:0.02	dininghall:1452.89	dormitory:73.34	library:91.4	supermaket:562.6
+211	dininghall:62.4	dormitory:2.3	library:3.0	supermaket:27.0
+218	classroom:0.75	dininghall:418.09	dormitory:20.84	library:5.4	supermaket:131.4
+219	dininghall:1594.05	dormitory:5.11	library:4.0	supermaket:19.0
+288	bus:5.0	classroom:0.92	dininghall:1541.09	dormitory:53.74	library:7.4	supermaket:250.3
+4	bus:10.0	classroom:0.01	dininghall:1281.0	dormitory:65.03	print:1.95	supermaket:307.7
+281	bus:20.0	classroom:0.22	dininghall:2128.0	dormitory:161.98	library:22.7	supermaket:222.0
+280	dininghall:1500.13	dormitory:39.21	library:12.7	supermaket:832.8
+283	dininghall:4.63	dormitory:0.01	supermaket:8.5
+285	classroom:0.05	dininghall:1822.7	dormitory:63.13	library:16.2	supermaket:244.6
+284	classroom:0.09	dininghall:698.36	dormitory:78.82	library:6.3	supermaket:105.9
+287	dininghall:1457.68	dormitory:4.0	library:50.2	supermaket:494.88
+286	classroom:0.07	dininghall:39.8	dormitory:0.81
+263	dininghall:435.8	dormitory:6.4	supermaket:91.7
+262	bus:12.0	dininghall:907.4	dormitory:87.57	print:0.3	supermaket:275.9
+261	bus:1.0	classroom:1.08	dininghall:1245.07	dormitory:75.19	library:114.1	supermaket:114.9
+260	dininghall:64.51	dormitory:2.8
+265	bus:4.0	dininghall:1348.25	dormitory:39.91	library:15.7	supermaket:310.6
+264	bus:1.0	classroom:0.15	dininghall:1418.17	dormitory:71.82	library:35.4	print:0.15	supermaket:416.2
+268	bus:1.0	classroom:0.61	dininghall:1208.71	dormitory:36.08	library:20.9	print:12.0	supermaket:201.6
+59	bus:5.0	classroom:0.5	dininghall:1361.14	dormitory:217.89	library:3.8	print:5.1	supermaket:990.9
+58	bus:8.0	dininghall:1664.96	dormitory:139.41	library:4.8	print:4.65	supermaket:402.8
+55	dininghall:17.73	dormitory:0.4	supermaket:19.5
+57	bus:4.0	classroom:1.21	dininghall:903.03	dormitory:96.67	library:46.8	print:10.65	supermaket:87.9
+56	bus:12.0	classroom:0.06	dininghall:1560.65	dormitory:59.49	library:50.1	supermaket:397.3
+51	bus:5.0	classroom:0.04	dininghall:1434.61	dormitory:53.53	library:23.5	supermaket:635.7
+50	dininghall:1589.89	dormitory:60.9	library:5.6	supermaket:556.99
+53	bus:43.0	dininghall:1842.77	dormitory:89.61	library:18.0	supermaket:351.1
+536	bus:8.0	classroom:4.07	dininghall:2258.16	dormitory:74.07	library:150.7	print:1.5	supermaket:776.6
+535	bus:1.0	dininghall:782.66	dormitory:11.95	library:31.0	supermaket:197.35
+63	bus:4.0	dininghall:1832.75	dormitory:225.51	supermaket:436.5
+531	bus:6.0	dininghall:3171.6	dormitory:57.11	library:3.9	supermaket:510.9
+530	bus:1.0	classroom:0.07	dininghall:1499.22	dormitory:47.53	library:16.8	print:34.5	supermaket:116.9
+538	dininghall:1668.72	dormitory:6.42	supermaket:296.7
+115	classroom:0.06	dininghall:46.2	dormitory:0.03	supermaket:22.9
+114	bus:24.0	classroom:0.17	dininghall:2120.61	dormitory:117.42	print:4.35	supermaket:104.2
+117	bus:107.0	classroom:0.02	dininghall:1285.62	dormitory:86.33	library:5.24	print:1.2	supermaket:416.3
+116	bus:9.0	classroom:1.46	dininghall:1211.11	dormitory:126.49	library:137.0	print:3.6	supermaket:228.5
+113	bus:22.0	classroom:0.09	dininghall:2251.69	dormitory:116.52	library:5.1	print:17.4	supermaket:1498.15
+112	dininghall:859.83	dormitory:86.99	library:110.6	supermaket:997.81
+118	bus:4.0	classroom:0.02	dininghall:19.7	dormitory:14.14
+429	bus:17.0	classroom:0.01	dininghall:1402.7	dormitory:59.3	supermaket:490.9
+428	classroom:0.03	dininghall:1194.62	dormitory:43.38	supermaket:368.71
+534	dininghall:1484.0	dormitory:91.19	library:8.0	supermaket:485.9
+421	bus:41.0	classroom:0.31	dininghall:1419.03	dormitory:96.7	library:96.9	supermaket:684.7
+420	classroom:0.01	dininghall:26.7	dormitory:0.64
+425	classroom:0.33	dininghall:1250.04	dormitory:63.79	supermaket:400.5
+424	bus:8.0	classroom:0.01	dininghall:1069.61	dormitory:40.39	library:72.4	supermaket:525.04
+426	bus:7.0	dininghall:2055.54	dormitory:74.96	library:1.5	print:2.0	supermaket:551.89
+308	bus:40.0	classroom:0.05	dininghall:619.8	dormitory:35.92	library:17.9	print:3.3	supermaket:105.4
+309	classroom:0.02	dininghall:1734.16	dormitory:83.18	library:15.5	supermaket:326.2
+300	classroom:0.1	dininghall:1574.71	dormitory:76.94	library:97.2	print:7.2	supermaket:519.1
+301	bus:1.0	classroom:0.01	dininghall:1148.68	dormitory:59.81	library:7.0	print:0.15	supermaket:273.4
+302	dininghall:874.1	dormitory:14.1	library:6.2	supermaket:112.2
+303	classroom:0.01	dininghall:21.6	dormitory:0.01
+304	bus:9.0	classroom:0.06	dininghall:1736.43	dormitory:85.92	library:63.2	supermaket:424.5
+307	bus:6.0	dininghall:1170.31	dormitory:122.44	supermaket:444.0
+229	bus:2.0	dininghall:1139.01	dormitory:27.69	library:46.8	supermaket:287.4
+226	bus:11.0	classroom:1.03	dininghall:1087.24	dormitory:114.22	print:1.5	supermaket:938.4
+225	classroom:0.01	dininghall:1543.76	dormitory:116.64	library:36.7	print:0.3	supermaket:140.4
+224	bus:9.0	classroom:0.3	dininghall:1598.13	dormitory:20.25	library:2.8	print:43.05	supermaket:299.0
+223	classroom:0.38	dininghall:309.63	dormitory:15.36	library:3.2	supermaket:107.7
+222	bus:23.0	classroom:0.39	dininghall:2036.09	dormitory:48.24	library:0.8	supermaket:388.4
+89	bus:8.0	classroom:0.4	dininghall:1631.77	dormitory:80.89	library:52.3	supermaket:820.9
+150	classroom:0.01	dininghall:1299.91	dormitory:198.8	library:9.6	supermaket:183.1
+153	classroom:0.01	dininghall:24.4	dormitory:2.6
+155	classroom:0.03	dininghall:26.8	dormitory:6.26
+157	classroom:0.25	dininghall:1519.51	dormitory:63.63	library:2.3	supermaket:852.6
+156	bus:1.0	classroom:0.02	dininghall:115.83	dormitory:8.04	library:3.6	supermaket:33.0
+159	dininghall:45.0	dormitory:1.02	supermaket:13.2
+158	bus:8.0	classroom:0.01	dininghall:1319.09	dormitory:25.73	library:20.4	supermaket:516.1
+80	bus:5.0	classroom:0.02	dininghall:1405.91	dormitory:23.74	supermaket:80.1
+398	dininghall:15.8	supermaket:7.6
+49	classroom:0.03	dininghall:19.1	dormitory:0.47
+46	bus:27.0	classroom:0.67	dininghall:1045.7	dormitory:214.51	library:151.2	supermaket:410.1
+47	bus:96.0	classroom:0.01	dininghall:1012.11	dormitory:21.05	library:7.92	supermaket:216.5
+44	bus:8.0	dininghall:1056.14	dormitory:41.07	library:25.1	print:1.2	supermaket:220.8
+42	dininghall:105.5	dormitory:2.5	library:46.32	supermaket:104.9
+41	classroom:0.52	dininghall:1173.92	dormitory:154.75	library:84.8	print:4.65	supermaket:209.5
+5	dininghall:49.1	dormitory:2.32	supermaket:26.0
+489	bus:1.0	dininghall:1092.19	dormitory:120.48	library:2.5	print:0.3	supermaket:95.8
+486	dininghall:484.98	dormitory:15.91	supermaket:129.3
+485	classroom:0.01	dininghall:45.5	dormitory:1.63	library:2.0	print:1.5	supermaket:4.0
+484	bus:4.0	dininghall:1020.5	dormitory:77.98	library:0.8	print:4.5	supermaket:95.4
+481	bus:12.0	classroom:0.22	dininghall:1211.0	dormitory:62.57	library:40.7	supermaket:252.4
+480	dininghall:104.43	dormitory:7.8	supermaket:41.4
+473	bus:5.0	classroom:0.02	dininghall:1698.52	dormitory:52.66	print:0.75	supermaket:208.1
+470	bus:24.0	classroom:0.03	dininghall:1267.48	dormitory:86.69	library:5.2	supermaket:126.3
+471	bus:9.0	dininghall:1108.44	dormitory:72.97	supermaket:281.5
+476	bus:10.0	classroom:0.15	dininghall:1798.02	dormitory:95.7	library:39.2	print:0.15	supermaket:397.1
+474	classroom:0.01	dininghall:1433.62	dormitory:22.26	print:5.4	supermaket:244.2
+475	bus:24.0	classroom:0.04	dininghall:992.9	dormitory:220.15	library:17.0	print:1.2	supermaket:238.7
+479	bus:4.0	classroom:0.17	dininghall:650.63	dormitory:23.68	library:22.4	print:0.9	supermaket:139.9

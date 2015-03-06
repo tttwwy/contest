@@ -9,8 +9,8 @@ from contest.util.log import logging, train_log, run_time
 from contest.util.conf import setting
 import cPickle
 import collections
-
-
+import os
+import re
 class BaseModel(object):
     def __init__(self):
 
@@ -26,6 +26,16 @@ class BaseModel(object):
         self.default_label = default_label
         self.map = {}
 
+    def feature_file_search(self,work_dir,feature_list):
+        file_list = os.listdir(work_dir)
+        is_chosen = [False] * len(file_list)
+        for feature_name in feature_list:
+            for index,flag in enumerate(is_chosen):
+                if not flag and re.search(r'^{0}.txt$'.format(feature_name),file_list[index]):
+                    is_chosen[index] = True
+        result = [file_list[index][:-4] for index,flag in enumerate(is_chosen) if flag]
+        result = list(set(result))
+        return result
 
     @run_time
     def save_model(self, model_file_name):
@@ -161,4 +171,4 @@ class BaseModel(object):
 
 
 if __name__ == "__main__":
-    pass
+    BaseModel.feature_file_search()

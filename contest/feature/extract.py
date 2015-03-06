@@ -25,6 +25,8 @@ class Base(object):
 
     @run_time
     def extract(self,feature_name,sql):
+        logging.info('extract {0} start:'.format(feature_name))
+        logging.info('sql:{0}'.format(sql))
         with open(os.path.join(self.work_dir, feature_name + ".txt"), 'w') as f:
             for line in self.read_sql(sql):
                 if feature_name[:2] == 'si':
@@ -64,7 +66,8 @@ class MySql(Base):
         self.set_database()
         print self.work_dir
 
-
+    def run_sql(self,sql):
+        self.cursor.execute(sql)
 
     @run_time
     def set_database(self,db=''):

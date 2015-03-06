@@ -43,17 +43,18 @@ class SparkModel(base.BaseModel):
 # 读取特征文件，转化成框架的标准特征文件fdata
 
     @run_time
-    def features_to_fdata(self, work_dir, *args):
-        new_data = SparkModel.sc.textFile(os.path.join(work_dir, args[0] + ".txt"))
-        for feature_name in args[1:]:
+    def features_to_fdata(self, work_dir, file_list):
+        file_list = self.feature_file_search(work_dir,file_list)
+        new_data = SparkModel.sc.textFile(os.path.join(work_dir, file_list[0] + ".txt"))
+        for feature_name in file_list[1:]:
             file_name = os.path.join(work_dir, feature_name + ".txt")
             data = SparkModel.sc.textFile(file_name)
             new_data = new_data + data
 
-        self.feature_names = args
+        self.feature_names = file_list
 
         fdata = self.data_to_fdata(new_data)
-        self.model_params['feature_names'].update(args)
+        self.model_params['feature_names'].update(file_list)
         return fdata
 
     @run_time
