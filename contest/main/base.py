@@ -11,6 +11,7 @@ import cPickle
 import collections
 import os
 import re
+from itertools import product
 class BaseModel(object):
     def __init__(self):
 
@@ -53,6 +54,33 @@ class BaseModel(object):
             self.model = cPickle.load(f)
         with open(model_file_name + ".index", "r") as f:
             self.map = cPickle.load(f)
+
+
+    def gird_search(self,ftrain,ftest,model,**kwargs):
+        keys = []
+        values = []
+        params = []
+        scores = []
+        result = []
+        mtrain = self.transform_fdata(ftrain, model.train_data_type)
+        mtest = self.transform_fdata(ftest, model.train_data_type)
+        for key,value in kwargs.iteritems():
+            if isinstance(value,list):
+                keys.append(key)
+                values.append(value)
+
+        for item in product(*values):
+            param = {}
+            for index,key in enumerate(keys):
+                kwargs[key] = item[index]
+                param[key] = item[index]
+            self.train_mdata(mtrain,model,**kwargs)
+            score = self.evaluate_mdata(mtest)
+            result.append([param,score])
+            # params.append(param)
+            # scores.append(score)
+
+        return result
 
 
     # 模型训练
