@@ -7,7 +7,7 @@ print conf.setting.log_path
 # from contest.util.log import *
 
 from src.feature import MyExtract
-
+import os
 
 
 for work_dir,database in [('G:\\Program\\python\\contest\\score\\feature\\train',"score_train"),("G:\\Program\\python\\contest\\score\\feature\\test","score_test")]:
@@ -39,9 +39,13 @@ for work_dir,database in [('G:\\Program\\python\\contest\\score\\feature\\train'
                         'week': 'week(time)',
                         'daypart': 'daypart(time)'}
         for time in times:
+            sql_list = sql.strip().split(",")
+            feature_list = feature_name.strip().split("_")
             if time == 'all_term':
-                new_sql = sql.replace('month(time),', '')
-                new_feature_name = feature_name.replace('time_', '')
+                sql_list = [x for x in sql_list if x != 'month(time)']
+                feature_list.remove('time')
+                new_sql = ','.join(sql_list)
+                new_feature_name = '_'.join(feature_list)
             else:
                 new_sql = sql.replace('month(time)', sql_replace[time])
                 new_feature_name = feature_name.replace('time', time)
@@ -63,10 +67,10 @@ for work_dir,database in [('G:\\Program\\python\\contest\\score\\feature\\train'
 
     feature.extract('uid_term_score1', ''' SELECT uid,term,rank FROM score''')
     feature.extract('uid_term_score2', ''' select uid,term,rank*rank from score''')
-    feature.extract('uid_term_score3', ''' select a.uid,0,a.rank*b.rank from
-                                            (select uid,rank from score where term=1)a
-                                            INNER JOIN
-                                            (select uid,rank from score where term=2)b on a.uid = b.uid''')
+    # feature.extract('uid_term_score3', ''' select a.uid,0,a.rank*b.rank from
+    #                                         (select uid,rank from score where term=1)a
+    #                                         INNER JOIN
+    #                                         (select uid,rank from score where term=2)b on a.uid = b.uid''')
 
     # uid_term_time
     time_feature('uid_term_time_1',
@@ -107,3 +111,9 @@ for work_dir,database in [('G:\\Program\\python\\contest\\score\\feature\\train'
     time_feature('uid_term_time_location_5',
                  ['all_term', 'month'],
                  ''' SELECT uid,term,month(time),location,count(uid)/count(distinct day(time)) FROM `money` group by uid,term,month(time),location;''')
+
+    try:
+        os.remove(os.path.join(work_dir,'uid_term3_score1.txt'))
+        os.remove(os.path.join(work_dir, 'uid_term3_score2.txt'))
+    except Exception,e:
+        pass

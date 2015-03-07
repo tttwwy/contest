@@ -5,7 +5,7 @@ import time
 import os
 import collections
 
-from contest.util.log import logging, train_log, run_time
+from contest.util.log import logging, train_logging, run_time
 from contest.util.conf import setting
 import cPickle
 import collections
@@ -55,8 +55,45 @@ class BaseModel(object):
         with open(model_file_name + ".index", "r") as f:
             self.map = cPickle.load(f)
 
+    def cross_validation(self,ftrain,model,scale=0.7,times=1,show_detail=False,**kwargs):
+        results = []
+        print times
+        for i in range(times):
+            validation_train_data,validation_test_data = self.divide_data(ftrain,scale)
+            result = self.gird_search(validation_train_data,validation_test_data,show_log=show_detail,model=model,**kwargs)
+            results.append(result)
 
-    def gird_search(self,ftrain,ftest,model,**kwargs):
+        first_result = results[0]
+        for result in results[1:]:
+            for index,(param,score) in enumerate(result):
+                for key,value in score.iteritems():
+                    first_result[index][1][key] += value
+
+        for index, (param, score) in enumerate(result):
+            for key, value in score.iteritems():
+                first_result[index][1][key] /= times
+
+        # self.model.train_params = param
+
+        print len(first_result)
+        for index,(param,score) in enumerate(first_result):
+            self.model.train_params = param
+            self.model_params['score'] = score
+            if index == 0:
+                self.log_params_name()
+            self.log_params_value()
+        return first_result
+
+
+
+
+
+
+
+
+
+
+    def gird_search(self,ftrain,ftest,model,show_log=True,**kwargs):
         keys = []
         values = []
         result = []
@@ -76,10 +113,11 @@ class BaseModel(object):
             self.train_mdata(mtrain,model,**kwargs)
 
             score = self.evaluate_mdata(mtest,log=False)
-            if is_first:
-                self.log_params_name()
-                is_first = False
-            self.log_params_value()
+            if show_log:
+                if is_first:
+                    self.log_params_name()
+                    is_first = False
+                self.log_params_value()
             result.append([param,score])
 
         return result
@@ -157,7 +195,8 @@ class BaseModel(object):
         train_params = self.model.train_params.keys()
         result_list = scores + ['model']+predict_params + train_params + feature_names
         result_str = "\t".join(result_list)
-        train_log(result_str)
+        train_logging.info(result_str)
+
 
     # 显示训练参数和评分的值
     @run_time
@@ -168,7 +207,7 @@ class BaseModel(object):
         train_params = self.model.train_params.values()
         result_list = scores + [self.model.model_name] + predict_params + train_params + [",".join(feature_names)]
         result_str = "\t".join([str(x) for x in result_list])
-        train_log(result_str)
+        train_logging.info(result_str)
 
     # 对数据进行评分
     @run_time

@@ -4,7 +4,7 @@ __author__ = 'WangZhe'
 
 import os
 import random
-from contest.util.log import logging,train_log,run_time
+from contest.util.log import logging,train_logging,run_time
 import base
 import cPickle
 from scipy.sparse import lil_matrix,vstack
@@ -36,7 +36,9 @@ class GeneralModel(base.BaseModel):
 
     @run_time
     def features_to_fdata(self, work_dir, file_list):
+        self.model_params['feature_names'].update(file_list)
         file_list = self.feature_file_search(work_dir,file_list)
+        logging.info(file_list)
         new_data = self.file_to_data(os.path.join(work_dir, file_list[0] + ".txt"), file_list[0]   )
         for feature_name in file_list[1:]:
             file_name = os.path.join(work_dir, feature_name + ".txt")
@@ -47,7 +49,7 @@ class GeneralModel(base.BaseModel):
         label_data = self.read_labels(self.label_file_path)
         new_data = pd.merge(new_data, label_data, how='inner', on='uid')
         new_data = new_data.fillna(0.0)
-        self.model_params['feature_names'].update(file_list)
+
         return new_data
 
     def file_to_data(self, file_name,feature_name):
