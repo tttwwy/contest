@@ -37,6 +37,7 @@ validation_train_data,validation_test_data = model.divide_data(train_fdata,0.5)
         #                   warm_start=False)
 
 RR = Sklearn(linear_model.Ridge)
+
 result =  model.gird_search(validation_train_data,validation_test_data,RR, alpha=[0.01,0.1,1], copy_X=True, fit_intercept=True,
                   max_iter=None,
                   normalize=True, solver='auto', tol=[0.1,0.01]
@@ -45,9 +46,9 @@ for param,score in result:
     print param,score['score']
 
         #
-        # RR = Sklearn(GradientBoostingRegressor)
-        # model.train_fdata(validation_train_data, RR, n_estimators=1000, learning_rate=0.1,
-        #                   max_depth=1, random_state=0, loss='ls')
+RR = Sklearn(GradientBoostingRegressor)
+model.train_fdata(validation_train_data, RR, n_estimators=1000, learning_rate=0.1,
+                  max_depth=1, random_state=0, loss='ls')
 
         # RR = Sklearn(RandomForestRegressor)
         # model.train_fdata(train_fdata, RR, n_estimators=100,max_features ='auto',max_depth=3)

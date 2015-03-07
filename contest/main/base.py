@@ -59,9 +59,8 @@ class BaseModel(object):
     def gird_search(self,ftrain,ftest,model,**kwargs):
         keys = []
         values = []
-        params = []
-        scores = []
         result = []
+        is_first = True
         mtrain = self.transform_fdata(ftrain, model.train_data_type)
         mtest = self.transform_fdata(ftest, model.train_data_type)
         for key,value in kwargs.iteritems():
@@ -75,10 +74,13 @@ class BaseModel(object):
                 kwargs[key] = item[index]
                 param[key] = item[index]
             self.train_mdata(mtrain,model,**kwargs)
-            score = self.evaluate_mdata(mtest)
+
+            score = self.evaluate_mdata(mtest,log=False)
+            if is_first:
+                self.log_params_name()
+                is_first = False
+            self.log_params_value()
             result.append([param,score])
-            # params.append(param)
-            # scores.append(score)
 
         return result
 
@@ -99,13 +101,13 @@ class BaseModel(object):
 
     # 对fdata格式的验证集评分
     @run_time
-    def evaluate_fdata(self, fdata, **kwargs):
+    def evaluate_fdata(self, fdata,log=True, **kwargs):
         mdata = self.transform_fdata(fdata, self.model.train_data_type, is_train=False)
-        return self.evaluate_mdata(mdata, **kwargs)
+        return self.evaluate_mdata(mdata,log, **kwargs)
 
     # 对mdata格式的验证集评分
     @run_time
-    def evaluate_mdata(self, mdata, **kwargs):
+    def evaluate_mdata(self, mdata,log=True, **kwargs):
         uid_label_predict = self.predict_mdata(mdata)
         result = self.handle_predict_result(uid_label_predict, **kwargs)
         self.model_params['score'] = {}
@@ -113,8 +115,8 @@ class BaseModel(object):
 
         result = self.get_score(result)
         self.model_params['score'].update(result)
-
-        self.log_params_value()
+        if log:
+            self.log_params_value()
         return result
 
     # 对fdata格式的测试数据，产生提交文件
