@@ -6,8 +6,9 @@
 class Sklearn():
     def __init__(self,model):
         self.train_data_type = 'sklearn_dense'
-        self.model_name = 'Sklearn'
         self.model = model()
+        self.model_name = type(self.model).__name__
+
 
     def train(self,data,**kwargs):
         uid, y, x = data

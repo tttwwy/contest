@@ -155,7 +155,7 @@ class BaseModel(object):
         predict_params = self.model_params['predict_params'].keys()
         feature_names = ['feature_names']
         train_params = self.model.train_params.keys()
-        result_list = scores + predict_params + train_params + feature_names
+        result_list = scores + ['model']+predict_params + train_params + feature_names
         result_str = "\t".join(result_list)
         train_log(result_str)
 
@@ -166,7 +166,7 @@ class BaseModel(object):
         predict_params = self.model_params['predict_params'].values()
         feature_names = self.model_params['feature_names']
         train_params = self.model.train_params.values()
-        result_list = scores + predict_params + train_params + [",".join(feature_names)]
+        result_list = scores + [self.model.model_name] + predict_params + train_params + [",".join(feature_names)]
         result_str = "\t".join([str(x) for x in result_list])
         train_log(result_str)
 
