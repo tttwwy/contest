@@ -3,7 +3,7 @@
 
 
 from contest.main.general import GeneralModel
-
+from contest.util.conf import setting
 class MyContest(GeneralModel):
     def __init__(self):
         super(GeneralModel,self).__init__()
@@ -30,7 +30,7 @@ class MyContest(GeneralModel):
         n = len(uid_label_predict)
 
         score = 1 - 6.0 * sum([(label - predict)**2 for uid,label,predict in uid_label_predict])/(n*(n**2-1))
-        score = round(score,3)
+        score = round(score,setting.score_precision)
         return {'score':score}
 
     def save_submit_file(self, predicts, save_file_name):

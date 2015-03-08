@@ -95,8 +95,8 @@ class GeneralModel(base.BaseModel):
         uid_matrix = fdata['uid'].values
         y_matrix = fdata['label'].values
         x_matrix = fdata[fdata.columns.drop(['uid','label'])].values
-        # from sklearn.preprocessing import StandardScaler
-        # x_matrix = StandardScaler().fit_transform(x_matrix)
+        from sklearn.preprocessing import StandardScaler
+        x_matrix = StandardScaler().fit_transform(x_matrix)
 
         return uid_matrix, y_matrix, x_matrix
 

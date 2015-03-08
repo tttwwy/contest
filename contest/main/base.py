@@ -55,43 +55,73 @@ class BaseModel(object):
         with open(model_file_name + ".index", "r") as f:
             self.map = cPickle.load(f)
 
+    # def cross_validation(self,ftrain,model,scale=0.7,times=1,show_detail=False,**kwargs):
+    #     results = []
+    #     print times
+    #     for i in range(times):
+    #         validation_train_data,validation_test_data = self.divide_data(ftrain,scale)
+    #         result = self.gird_search(validation_train_data,validation_test_data,show_log=show_detail,model=model,**kwargs)
+    #         results.append(result)
+    #
+    #     first_result = results[0]
+    #     for result in results[1:]:
+    #         for index,(param,score) in enumerate(result):
+    #             for key,value in score.iteritems():
+    #                 first_result[index][1][key] += value
+    #
+    #     for index, (param, score) in enumerate(result):
+    #         for key, value in score.iteritems():
+    #             first_result[index][1][key] /= times
+    #
+    #     # self.model.train_params = param
+    #
+    #     print len(first_result)
+    #     for index,(param,score) in enumerate(first_result):
+    #         self.model.train_params = param
+    #         self.model_params['score'] = score
+    #         if index == 0:
+    #             self.log_params_name()
+    #         self.log_params_value()
+    #     return first_result
+
     def cross_validation(self,ftrain,model,scale=0.7,times=1,show_detail=False,**kwargs):
-        results = []
-        print times
+        data = []
+
         for i in range(times):
-            validation_train_data,validation_test_data = self.divide_data(ftrain,scale)
-            result = self.gird_search(validation_train_data,validation_test_data,show_log=show_detail,model=model,**kwargs)
-            results.append(result)
+            ftrain,ftest = self.divide_data(ftrain,scale)
+            mtrain = self.transform_fdata(ftrain, model.train_data_type)
+            mtest = self.transform_fdata(ftest, model.train_data_type)
+            data.append((mtrain,mtest))
 
-        first_result = results[0]
-        for result in results[1:]:
-            for index,(param,score) in enumerate(result):
-                for key,value in score.iteritems():
-                    first_result[index][1][key] += value
+        keys = []
+        values = []
+        for key,value in kwargs.iteritems():
+            if isinstance(value,list):
+                keys.append(key)
+                values.append(value)
 
-        for index, (param, score) in enumerate(result):
-            for key, value in score.iteritems():
-                first_result[index][1][key] /= times
+        for total_index,item in enumerate(product(*values)):
+            param = {}
+            sum_score = []
+            for index,key in enumerate(keys):
+                kwargs[key] = item[index]
+                param[key] = item[index]
 
-        # self.model.train_params = param
+            for index,(mtrain,mtest) in enumerate(data):
+                self.train_mdata(mtrain, model, **kwargs)
+                score = self.evaluate_mdata(mtest,log=False)
+                if index == 0:
+                    sum_score = score
+                else:
+                    for key,value in score.iteritems():
+                        sum_score[key] += value
+            for key,value in sum_score.iteritems():
+                sum_score[key] = round(sum_score[key]*1.0 / times,setting.score_precision)
 
-        print len(first_result)
-        for index,(param,score) in enumerate(first_result):
-            self.model.train_params = param
-            self.model_params['score'] = score
-            if index == 0:
+            if total_index == 0:
                 self.log_params_name()
+            self.model_params['score'] = sum_score
             self.log_params_value()
-        return first_result
-
-
-
-
-
-
-
-
-
 
     def gird_search(self,ftrain,ftest,model,show_log=True,**kwargs):
         keys = []

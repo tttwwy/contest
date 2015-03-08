@@ -1,7 +1,7 @@
 # coding=utf-8
 # created by WangZhe on 2014/12/19
 from scipy.sparse import lil_matrix,vstack
-from sklearn import linear_model
+from sk import linear_model
 
 
 

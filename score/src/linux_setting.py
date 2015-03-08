@@ -5,3 +5,4 @@ log_path = '/media/172.16.46.8/wangzhe/contest/score/log/log'
 train_log_path = '/media/172.16.46.8/wangzhe/contest/score/log/train_log'
 label_file_path = '/media/172.16.46.8/wangzhe/contest/score/feature/uid_term3_score1.txt'
 default_label = '0'
+score_precision = 3

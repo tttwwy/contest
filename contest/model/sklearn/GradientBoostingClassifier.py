@@ -1,7 +1,7 @@
 # coding=utf-8
 # created by WangZhe on 2014/12/19
 
-from sklearn.ensemble import GradientBoostingClassifier
+from sk.ensemble import GradientBoostingClassifier
 
 
 class GBDT():

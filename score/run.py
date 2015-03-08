@@ -23,15 +23,19 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn import svm
 from src.mycontest import MyContest
-from contest.model.sklearn.sklearn import Sklearn
+from contest.model.sklearn.sk import Sklearn
 from contest.model.sklearn.sklearn_pairwise import PairWise
+from contest.model.sklearn.ranksvm import RankSVM
 import itertools
 model = MyContest()
 
 
 feature_list = [
-    'uid_term[0-9]_score[1-3]',
-    'uid_term3_[1-4]'
+    'uid_term1_score1',
+    'uid_term2_score1',
+    # 'uid_term3_[1-4]',
+    'uid_term3_month_3',
+    'uid_term3_3'
 ]
 if platform.system() == 'Windows':
     work_dir = r'G:/Program/python/contest/score/feature'
@@ -43,6 +47,7 @@ test_fdata = model.features_to_fdata(os.path.join(work_dir,'test'),feature_list)
 columns = list(set(train_fdata.columns).intersection(set(test_fdata.columns)))
 train_fdata = train_fdata[columns]
 test_fdata = test_fdata[columns]
+
 # validation_train_data,validation_test_data = model.divide_data(train_fdata,0.8)
 
 
@@ -88,5 +93,6 @@ test_fdata = test_fdata[columns]
 #                        max_depth=[1,2], random_state=0)
 
 
-RR = PairWise(LogisticRegression)
-print model.cross_validation(train_fdata, RR, scale=0.81, times=2,show_detail=True,C=[0.1,0.5,1.0], penalty='l1', tol=0.1)
+# RR = PairWise(LogisticRegression)
+RR = RankSVM()
+print model.cross_validation(train_fdata, RR, scale=0.81, times=5,show_detail=False,C=[0.1,0.5,1.0,3,5,10,100], loss=['l1','l2'], tol=[0.01,0.1,1])

@@ -2,7 +2,7 @@
 # created by WangZhe on 2014/12/19
 from scipy.sparse import lil_matrix,vstack
 
-from sklearn import ensemble
+from sk import ensemble
 
 
 class RF():
