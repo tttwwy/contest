@@ -53,7 +53,7 @@ class RankSVM():
         uid, y, x = data
         new_x,new_y = self.transform_pairwise(x,y)
         model = LinearSVC(**kwargs)
-        logging.info('{x[0]},{x[1]}'.format(x = new_x.shape))
+        logging.info(x.shape)
         model.fit(new_x, new_y)
         self.model = model
 

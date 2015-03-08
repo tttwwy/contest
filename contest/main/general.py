@@ -78,6 +78,16 @@ class GeneralModel(base.BaseModel):
     def divide_data(self,data,scale_list):
         if isinstance(scale_list,float):
             scale_list = [scale_list,1-scale_list]
+
+        #
+        # rows = list(data.index)
+        # row_count = len(rows)
+        # random.shuffle(rows)
+        # data.reindex(rows)
+        #
+        # scale_count = int(row_count * scale_list[0])
+        # return [data[:scale_count],data[scale_count:]]
+
         result = []
         total_row = data.shape[0]
         remain = data

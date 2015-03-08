@@ -88,10 +88,13 @@ class BaseModel(object):
         data = []
 
         for i in range(times):
-            ftrain,ftest = self.divide_data(ftrain,scale)
-            mtrain = self.transform_fdata(ftrain, model.train_data_type)
-            mtest = self.transform_fdata(ftest, model.train_data_type)
+            ftrain_data,ftest_data = self.divide_data(ftrain,scale)
+            print ftrain_data.shape
+            mtrain = self.transform_fdata(ftrain_data, model.train_data_type)
+            mtest = self.transform_fdata(ftest_data, model.train_data_type)
             data.append((mtrain,mtest))
+
+
 
         keys = []
         values = []
@@ -109,7 +112,7 @@ class BaseModel(object):
 
             for index,(mtrain,mtest) in enumerate(data):
                 self.train_mdata(mtrain, model, **kwargs)
-                score = self.evaluate_mdata(mtest,log=False)
+                score = self.evaluate_mdata(mtest,log=show_detail)
                 if index == 0:
                     sum_score = score
                 else:

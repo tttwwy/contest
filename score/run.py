@@ -10,8 +10,8 @@ else:
 
 from contest.util.log import logging
 if platform.system() == 'Windows':
-    # logging.setLevel('ERROR')
-    logging.setLevel('DEBUG')
+    logging.setLevel('ERROR')
+    # logging.setLevel('DEBUG')
 
 else:
     logging.setLevel('DEBUG')
@@ -31,11 +31,11 @@ model = MyContest()
 
 
 feature_list = [
-    'uid_term1_score1',
-    'uid_term2_score1',
+    # 'uid_term1_score1',
+    # 'uid_term2_score1',
     # 'uid_term3_[1-4]',
     'uid_term3_month_3',
-    'uid_term3_3'
+    # 'uid_term3_3'
 ]
 if platform.system() == 'Windows':
     work_dir = r'G:/Program/python/contest/score/feature'
@@ -95,4 +95,4 @@ test_fdata = test_fdata[columns]
 
 # RR = PairWise(LogisticRegression)
 RR = RankSVM()
-print model.cross_validation(train_fdata, RR, scale=0.81, times=5,show_detail=False,C=[0.1,0.5,1.0,3,5,10,100], loss=['l1','l2'], tol=[0.01,0.1,1])
+print model.cross_validation(train_fdata, RR, scale=0.3, times=5,show_detail=True,C=[0.1,0.5,1.0,3,5,10,100], loss=['l1','l2'], tol=[0.01,0.1,1])
