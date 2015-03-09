@@ -91,6 +91,8 @@ class PairWise():
     @run_time
     def predict_values(self,x):
         values = range(x.shape[0])
+
+
         result = sorted(values,cmp=lambda a,b:cmp(self.predict_value(x[a] - x[b]),0))
         result = {x:index for index,x in enumerate(result)}
         new_result =  [result[index] for index in values]

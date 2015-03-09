@@ -11,7 +11,9 @@ import cPickle
 import collections
 import os
 import re
+import numpy as np
 from itertools import product
+import pandas as pd
 class BaseModel(object):
     def __init__(self):
 
@@ -84,17 +86,38 @@ class BaseModel(object):
     #         self.log_params_value()
     #     return first_result
 
-    def cross_validation(self,ftrain,model,scale=0.7,times=1,show_detail=False,**kwargs):
+    def cross_validation_mdata(self,ftrain,model,times=1,show_detail=False,**kwargs):
         data = []
+        cv_data = self.divide_data(ftrain, [1.0 / times] * times)
+        for index in range(len(cv_data)):
+            test_data = cv_data[index]
+            train_data = pd.concat([x for idx, x in enumerate(cv_data) if idx != index])
+            mtrain = self.transform_fdata(train_data, model.train_data_type)
+            mtest = self.transform_fdata(test_data, model.train_data_type)
+            data.append((mtrain, mtest))
 
-        for i in range(times):
-            ftrain_data,ftest_data = self.divide_data(ftrain,scale)
-            print ftrain_data.shape
-            mtrain = self.transform_fdata(ftrain_data, model.train_data_type)
-            mtest = self.transform_fdata(ftest_data, model.train_data_type)
-            data.append((mtrain,mtest))
-
-
+    def cross_validation(self,data,model,times=1,show_detail=False,**kwargs):
+        datas = []
+        cv_data = self.divide_data(data, [1.0 / times] * times)
+        if isinstance(datas, pd.core.frame.DataFrame):
+            for index in range(len(cv_data)):
+                test_data = cv_data[index]
+                train_data = pd.concat([x for idx,x in enumerate(cv_data) if idx != index])
+                mtrain = self.transform_fdata(train_data, model.train_data_type)
+                mtest = self.transform_fdata(test_data, model.train_data_type)
+                datas.append((mtrain,mtest))
+        else:
+            for index in range(len(cv_data)):
+                test_data = cv_data[index]
+                train_data = [[],[],[]]
+                for idx,x in enumerate(cv_data):
+                    if idx != index:
+                       train_data[0] += cv_data[idx][0]
+                       train_data[1] += cv_data[idx][1]
+                train_data[2] = np.vstack([x[2] for idx,x in enumerate(cv_data) if idx != index])
+                datas.append((train_data,test_data))
+                # print 'train:',train_data
+                # print 'test:',test_data
 
         keys = []
         values = []
@@ -110,7 +133,7 @@ class BaseModel(object):
                 kwargs[key] = item[index]
                 param[key] = item[index]
 
-            for index,(mtrain,mtest) in enumerate(data):
+            for index,(mtrain,mtest) in enumerate(datas):
                 self.train_mdata(mtrain, model, **kwargs)
                 score = self.evaluate_mdata(mtest,log=show_detail)
                 if index == 0:
@@ -125,6 +148,8 @@ class BaseModel(object):
                 self.log_params_name()
             self.model_params['score'] = sum_score
             self.log_params_value()
+
+
 
     def gird_search(self,ftrain,ftest,model,show_log=True,**kwargs):
         keys = []

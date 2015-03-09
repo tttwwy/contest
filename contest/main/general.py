@@ -8,7 +8,7 @@ from contest.util.log import logging,train_logging,run_time
 import base
 import cPickle
 from scipy.sparse import lil_matrix,vstack
-import numpy
+import numpy as np
 import pandas as pd
 
 class GeneralModel(base.BaseModel):
@@ -37,8 +37,9 @@ class GeneralModel(base.BaseModel):
     @run_time
     def features_to_fdata(self, work_dir, file_list):
         self.model_params['feature_names'].update(file_list)
+
         file_list = self.feature_file_search(work_dir,file_list)
-        logging.info(file_list)
+        logging.error(file_list)
         new_data = self.file_to_data(os.path.join(work_dir, file_list[0] + ".txt"), file_list[0]   )
         for feature_name in file_list[1:]:
             file_name = os.path.join(work_dir, feature_name + ".txt")
@@ -79,24 +80,52 @@ class GeneralModel(base.BaseModel):
         if isinstance(scale_list,float):
             scale_list = [scale_list,1-scale_list]
 
-        #
-        # rows = list(data.index)
-        # row_count = len(rows)
-        # random.shuffle(rows)
-        # data.reindex(rows)
+        result = []
+        # print isinstance(data, pd.core.frame.DataFrame)
+
+        if isinstance(data,pd.core.frame.DataFrame):
+            row_count = len(data)
+            rows = range(row_count)
+            random.shuffle(rows)
+            new_data = data.reindex(index=rows,copy=False)
+        else:
+            new_data = zip(*data)
+
+            row_count = len(new_data)
+            random.shuffle(new_data)
+        start = 0
+        end = 0
+        for scale in scale_list:
+            start = end
+            end += int(scale * row_count)
+            if not isinstance(data, pd.core.frame.DataFrame):
+                uids = []
+                xs = []
+                ys = []
+                for uid, y, x in new_data[start:end]:
+                    uids.append(uid)
+                    ys.append(y)
+                    xs.append(x)
+                result.append([uids,ys,np.vstack(xs)])
+            else:
+                result.append(new_data[start:end])
+
+        return result
+
+
         #
         # scale_count = int(row_count * scale_list[0])
         # return [data[:scale_count],data[scale_count:]]
 
-        result = []
-        total_row = data.shape[0]
-        remain = data
-        for scale in scale_list:
-            num = int(total_row * scale)
-            rows = random.sample(remain.index,num)
-            result.append(remain.ix[rows])
-            remain = remain.drop(rows)
-        return result
+        # result = []
+        # total_row = data.shape[0]
+        # remain = data
+        # for scale in scale_list:
+        #     num = int(total_row * scale)
+        #     rows = random.sample(remain.index,num)
+        #     result.append(remain.ix[rows])
+        #     remain = remain.drop(rows)
+        # return result
 
 
 
