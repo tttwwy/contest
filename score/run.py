@@ -29,6 +29,7 @@ from src.mycontest import MyContest
 from contest.model.sklearn.sk import Sklearn
 from contest.model.sklearn.sklearn_pairwise import PairWise
 from contest.model.sklearn.ranksvm import RankSVM
+from contest.model.java.ranklib import Ranklib
 import itertools
 model = MyContest()
 
@@ -39,7 +40,7 @@ feature_list = [
     'uid_term2_score1',
     'uid_term3_[1-4]',
     'uid_term3_location_[1-9]',
-    'uid_term3_category_2',
+    # 'uid_term3_category_2',
 
 
 
@@ -115,19 +116,26 @@ print train_fdata.shape
 
 
 RR = PairWise(LogisticRegression)
-uid,y,x = model.transform_fdata(train_fdata,RR.train_data_type)
-from sklearn.decomposition import PCA
-pca = PCA(0.9)
+# RR = Ranklib()
+# uid,y,x = model.transform_fdata(train_fdata,RR.train_data_type)
+# from sklearn.decomposition import PCA
+# pca = PCA(0.9)
+#
+# pca.fit(x)
+# print pca.explained_variance_ratio_
+#
+#
+# model.cross_validation(train_fdata, RR, times=3,show_detail=True,C=[8], penalty=['l1'], tol=[0.01])
+# print x.shape
+# x = pca.fit_transform(x)
+# print x.shape
+# model.cross_validation([uid,y,x], RR, times=6,show_detail=False,C=[8], penalty=['l1'], tol=[0.01])
 
-pca.fit(x)
-print pca.explained_variance_ratio_
+
+# model.cross_validation(train_fdata,RR,times=4,show_detail=True,ranker=6,gmax=402,metric2t='NDCG@10',tree=200,leaf=30)
 
 
-model.cross_validation([uid,y,x], RR, times=6,show_detail=False,C=[8], penalty=['l1'], tol=[0.01])
-print x.shape
-x = pca.fit_transform(x)
-print x.shape
-model.cross_validation([uid,y,x], RR, times=6,show_detail=False,C=[8], penalty=['l1'], tol=[0.01])
+
 #
 # sort_index = np.argsort(-RR.model.coef_)
 #
@@ -157,11 +165,11 @@ model.cross_validation([uid,y,x], RR, times=6,show_detail=False,C=[8], penalty=[
 # # print train_fdata.columns[]
 #
 #
-# # RR = PairWise(svm.SVC)
-# # model.cross_validation(train_fdata, RR, scale=0.73, times=3,show_detail=False, C=1.0, cache_size=2000, class_weight=None, coef0=0.0, degree=3,
-# #                        gamma=0.0, kernel='rbf', max_iter=-1, probability=False, random_state=None,
-# #                        shrinking=True, tol=0.1, verbose=False)
-#
+RR = PairWise(svm.SVC)
+model.cross_validation(train_fdata, RR, times=3,show_detail=True, C=[1,8,100], cache_size=200, class_weight=None, coef0=[0], degree=3,
+                       gamma=[0], kernel='rbf', max_iter=[-1], probability=False,
+                       shrinking=True, tol=[0.1,0.01], verbose=False)
+# #
 # # RR = PairWise(GradientBoostingClassifier)
 # # model.cross_validation(train_fdata, RR, scale=0.73, times=3,show_detail=False, n_estimators=[100,300,500,1000], learning_rate=1.0,
 # #                        max_depth = 1, random_state = 0

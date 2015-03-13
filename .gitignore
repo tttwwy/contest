@@ -6,3 +6,5 @@
 *.ipynb
 score/log/*
 score/submit/*
+*.txt
+*.tmp

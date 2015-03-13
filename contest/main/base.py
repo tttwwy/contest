@@ -99,7 +99,8 @@ class BaseModel(object):
     def cross_validation(self,data,model,times=1,show_detail=False,**kwargs):
         datas = []
         cv_data = self.divide_data(data, [1.0 / times] * times)
-        if isinstance(datas, pd.core.frame.DataFrame):
+        logging.debug(isinstance(data, pd.core.frame.DataFrame))
+        if isinstance(data, pd.core.frame.DataFrame):
             for index in range(len(cv_data)):
                 test_data = cv_data[index]
                 train_data = pd.concat([x for idx,x in enumerate(cv_data) if idx != index])
